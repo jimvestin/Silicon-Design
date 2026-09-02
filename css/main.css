@@ -92,3 +92,244 @@ a {
     color: var(--link-color);
     text-decoration: none;
 }
+
+/* ================================================================
+   JIM VESTIN - BRAND / HEADER
+   ================================================================ */
+
+.navbar {
+  height: 76px;
+  padding: 16px max(24px, calc((100vw - 1296px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 3;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
+  height: 32px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: #565973;
+  font-weight: 600;
+}
+
+/* Dark mode */
+
+html.dark .nav-actions {
+  color: #ffffff;
+}
+
+.theme-toggle {
+  width: 46px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #D4D7E5;
+  border-radius: 20px;
+  padding: 3px;
+  background: #fff;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.theme-toggle i {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #6366F1;
+  transition: transform .2s;
+}
+
+html.dark .theme-toggle {
+  background: #2b2d42;
+}
+
+html.dark .theme-toggle i {
+  transform: translateX(22px);
+  background: #fff;
+}
+
+.sign-in {
+  display: flex;
+  align-items: center;
+}
+
+.sign-in img {
+  display: block;
+  height: 44px;
+}
+
+
+/* ================================================================
+   JIM VESTIN - DARK MODE
+   ================================================================ */
+
+html.dark {
+  --background-color: #0B0F19;
+  --color-text-body: #ffffff;
+  --color-text-heading: #ffffff;
+  --color-text-navigation: #ffffff;
+}
+
+html.dark body {
+  background-color: var(--background-color);
+  color: var(--color-text-body);
+}
+
+
+/* ================================================================
+   JIM VESTIN - APP FEATURES
+   ================================================================ */
+
+.app-features {
+  min-height: 1008px;
+  display: flex;
+  align-items: center;
+  gap: 140px;
+}
+
+.feature-phone {
+  position: relative;
+  width: 308px;
+  height: 683px;
+}
+
+.features-copy {
+  width: 746px;
+}
+
+.features-copy h2 img {
+  display: block;
+  height: 40px;
+}
+
+/* App Features title in dark mode */
+
+html.dark .features-copy h2 img {
+  filter: invert(1);
+}
+
+.features-copy > .muted {
+  color: #9397AD;
+  font-size: 18px;
+  line-height: 160%;
+  margin: 24px 0 52px;
+}
+
+
+/* Feature grid */
+
+.feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px 38px;
+}
+
+.feature-list article {
+  display: flex;
+  gap: 24px;
+}
+
+
+/* Feature icons */
+
+.feature-list > article > img {
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(99, 102, 241, .08);
+}
+
+
+/* Icons that already contain their own background */
+
+.feature-list > article > img.baked {
+  padding: 0;
+  background: none;
+}
+
+
+/* Feature headings */
+
+.feature-list h3 {
+  margin: 0 0 12px;
+  color: #0B0F19;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 140%;
+}
+
+html.dark .feature-list h3 {
+  color: #ffffff;
+}
+
+
+/* Feature text */
+
+.feature-list p {
+  color: #565973;
+  font-size: 16px;
+  line-height: 160%;
+  margin: 0;
+}
+
+html.dark .feature-list p {
+  color: #ffffff;
+  opacity: .7;
+}
+
+
+/* ================================================================
+   JIM VESTIN - RESPONSIVE
+   ================================================================ */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    position: relative;
+  }
+
+  .nav-actions span,
+  .theme-toggle {
+    display: none;
+  }
+
+  .app-features {
+    display: block;
+  }
+
+  .feature-phone {
+    margin: 80px auto;
+  }
+
+  .features-copy {
+    width: auto;
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+
+}
