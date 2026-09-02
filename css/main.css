@@ -1,94 +1,703 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-*, *::before,*::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-:root{
-    
-    /* variabler för färger vi kan tänkas använda på sidan*/
-    --background-color: #ffffff;
-    --background100-color: var(--color-gray-100);
-    --color-text-body: var(--color-gray-700);
-    --color-text-heading: var(--color-gray-900);
-    --color-text-navigation: var(--color-gray-800);
+/* ===================================================================
+   Jim Vestin
+   =================================================================== */
 
-    
-    --color-gray-100: #F3F6FF;
-    --color-gray-200: #EFF2FC;
-    --color-gray-300: #E2E5F1;
-    --color-gray-400: #D4D7E5;
-    --color-gray-500: #B4B7C9;
-    --color-gray-600: #9397AD;
-    --color-gray-700: #565973;
-    --color-gray-800: #565973;
-    --color-gray-900: #0B0F19;
-    
-    --color-primary: #6366F1;
-
-    --border-radius-medium: 0.375em;
-    --border-radius-large: 0.5em;
-
-    --link-color: blue;     
+:root {
+  --bg: #ffffff;
+  --bg-alt: #F5F6FE;
+  --ink: #171923;
+  --muted: #6E7191;
+  --panel: #ffffff;
+  --line: #E7E7F0;
+  --brand: #6366f1;
 }
 
-html,body{
-    /*standard storlekar samt font*/
-    color: var(--color-text-body);
-    background-color: var(--background-color);
-    line-height: 1.6;
-    font-family: "Manrope", sans-serif;
-}
-img{
-    /*för att lättare hantera bilderna, sätter 100% för att bilderna ska ta upp all tillgänglig yta*/
-    display:block;
-    width: 100%;
-}
-input, button, textarea,select{
-    font: inherit;
-}
-h1,h2,h3,h4,h5,h6 {
-    /*inställingar för våra rubriker. ändras efter behov*/
-    text-wrap: balance;
-    color: var(--color-text-heading);
-    font-weight: 800;
-    line-height: 1.3;
-}
-ol, ul{
-    list-style: none;
+html.dark {
+  --bg: #0b0f19;
+  --bg-alt: rgba(255, 255, 255, .03);
+  --ink: #fff;
+  --muted: rgba(255, 255, 255, .7);
+  --panel: rgba(255, 255, 255, .04);
+  --line: rgba(255, 255, 255, .15);
 }
 
-.container{
-    width: 100%;
-    margin-inline: auto;
-    padding-inline: 1rem;
-
-    @media (width >576px){
-        max-width: 540px;
-    }
-    @media (width >768px){
-        max-width: 720px;
-    }
-    @media (width >992px){
-        max-width: 960px;
-    }
-    @media (width >1200px){
-        max-width: 1140px;
-    }
-    @media (width >1400px){
-        max-width: 1320px;
-    }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.d4{
-    font-size: 3.5rem;
+html {
+  scroll-behavior: smooth;
 }
 
-.text-lg {
-    
-    font-size: 1.125rem;
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.6 Manrope, Arial, sans-serif;
+  transition: background .25s, color .25s;
 }
+
 a {
-    color: var(--link-color);
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.wrap {
+  width: 1296px;
+  max-width: calc(100% - 48px);
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+
+/* ===================================================================
+   Jim Vestin - Header / Navigation
+   =================================================================== */
+
+.navbar {
+  height: 76px;
+  padding: 16px max(24px, calc((100vw - 1296px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 3;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
+  height: 32px;
+}
+
+.logo .logo-dark {
+  display: none;
+}
+
+html.dark .logo .logo-light {
+  display: none;
+}
+
+html.dark .logo .logo-dark {
+  display: block;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: #565973;
+  font-weight: 600;
+}
+
+html.dark .nav-actions {
+  color: var(--muted);
+}
+
+.theme-toggle {
+  width: 46px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 3px;
+  background: #fff;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.theme-toggle i {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #6366f1;
+  transition: transform .2s;
+}
+
+html.dark .theme-toggle {
+  background: #2b2d42;
+}
+
+html.dark .theme-toggle i {
+  transform: translateX(22px);
+  background: #fff;
+}
+
+.sign-in {
+  display: flex;
+  align-items: center;
+}
+
+.sign-in img {
+  display: block;
+  height: 44px;
+}
+
+.button {
+  padding: 9px 20px;
+  border-radius: 4px;
+  background: var(--brand);
+  color: #fff;
+  font-size: 14px;
+}
+
+
+/* ===================================================================
+   Jim Vestin - Hero
+   =================================================================== */
+
+.hero {
+  min-height: 876px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse 42% 35% at 50% 100%,
+      rgba(99, 102, 241, .12),
+      rgba(218, 70, 239, .05) 42%,
+      transparent 72%
+    );
+}
+
+.hero-content {
+  height: 876px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.hero-copy {
+  margin-top: 224px;
+  width: 526px;
+  z-index: 1;
+}
+
+.hero-copy h1 {
+  color: var(--ink);
+}
+
+.hero-copy > p {
+  color: var(--muted);
+  font-size: 18px;
+  margin: 24px 0 48px;
+}
+
+.stores {
+  display: flex;
+  gap: 24px;
+}
+
+.stores a {
+  display: block;
+  width: 180px;
+  height: 52px;
+}
+
+.stores img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* ===================================================================
+   Hero phones
+   =================================================================== */
+
+.hero-phones {
+  position: absolute;
+  left: 550px;
+  top: 188px;
+  width: 746px;
+  height: 688px;
+}
+
+.device {
+  position: absolute;
+  overflow: hidden;
+}
+
+.device > img:first-child {
+  position: absolute;
+  inset: 20px 21px;
+  width: calc(100% - 42px);
+  height: calc(100% - 40px);
+  object-fit: cover;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.device .frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+/* Färdig telefonbild där ram + skärm redan finns i samma bild */
+
+.device.baked {
+  overflow: visible;
+}
+
+.device.baked > img {
+  position: static;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.hero-device {
+  left: 345px;
+  width: 402px;
+  height: 813px;
+}
+
+.tilted {
+  left: 115px;
+  top: 136px;
+  width: 396px;
+  height: 801px;
+  transform: rotate(-9deg);
+  transform-origin: bottom;
+  opacity: .86;
+}
+
+
+/* ===================================================================
+   Jim Vestin - Partner logos / Brands
+   =================================================================== */
+
+.logos {
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  margin-top: 96px;
+}
+
+.logos img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 35px 38px 35px 39px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #E2E5F1;
+  background: #fff;
+  object-fit: contain;
+  opacity: .6;
+}
+
+.logos img:last-child {
+  box-shadow:
+    0 4.4px 12px -1px rgba(19, 16, 34, .06),
+    0 2px 6.4px -1px rgba(19, 16, 34, .03);
+  opacity: 1;
+}
+
+html.dark .logos img {
+  border-color: rgba(255, 255, 255, .15);
+  background: transparent;
+  opacity: .7;
+}
+
+html.dark .logos img:last-child {
+  background: rgba(255, 255, 255, .04);
+  box-shadow: none;
+  opacity: 1;
+}
+
+
+/* ===================================================================
+   Jim Vestin - App Features
+   =================================================================== */
+
+.app-features {
+  min-height: 1008px;
+  display: flex;
+  align-items: center;
+  gap: 140px;
+}
+
+.feature-phone {
+  position: relative;
+  width: 308px;
+  height: 683px;
+}
+
+.features-copy {
+  width: 746px;
+}
+
+.features-copy h2 img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+html.dark .features-copy h2 img {
+  filter: invert(1);
+}
+
+.features-copy > .muted {
+  color: #9397AD;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-size: 18px;
+  line-height: 160%;
+  margin: 24px 0 52px;
+}
+
+html.dark .features-copy > .muted {
+  color: var(--muted);
+}
+
+
+/* ===================================================================
+   Feature grid
+   =================================================================== */
+
+.feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px 38px;
+}
+
+.feature-list article {
+  display: flex;
+  gap: 24px;
+}
+
+.feature-list > article > img {
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(99, 102, 241, .08);
+  object-fit: contain;
+}
+
+
+/* Färdiga ikoner där bakgrunden redan finns */
+
+.feature-list > article > img.baked {
+  padding: 0;
+  background: none;
+}
+
+
+/* Feature headings */
+
+.feature-list h3 {
+  margin: 0 0 12px;
+  color: #0B0F19;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 140%;
+}
+
+html.dark .feature-list h3 {
+  color: var(--ink);
+}
+
+
+/* Feature text */
+
+.feature-list p {
+  color: #565973;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-size: 16px;
+  line-height: 160%;
+  margin: 0;
+}
+
+html.dark .feature-list p {
+  color: var(--muted);
+}
+
+
+/* ================================================================
+   JIM VESTIN - BRAND / HEADER
+   ================================================================ */
+
+.navbar {
+  height: 76px;
+  padding: 16px max(24px, calc((100vw - 1296px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 3;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
+  height: 32px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: #565973;
+  font-weight: 600;
+}
+
+/* Dark mode */
+
+html.dark .nav-actions {
+  color: #ffffff;
+}
+
+.theme-toggle {
+  width: 46px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #D4D7E5;
+  border-radius: 20px;
+  padding: 3px;
+  background: #fff;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.theme-toggle i {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #6366F1;
+  transition: transform .2s;
+}
+
+html.dark .theme-toggle {
+  background: #2b2d42;
+}
+
+html.dark .theme-toggle i {
+  transform: translateX(22px);
+  background: #fff;
+}
+
+.sign-in {
+  display: flex;
+  align-items: center;
+}
+
+.sign-in img {
+  display: block;
+  height: 44px;
+}
+
+
+/* ================================================================
+   JIM VESTIN - DARK MODE
+   ================================================================ */
+
+html.dark {
+  --background-color: #0B0F19;
+  --color-text-body: #ffffff;
+  --color-text-heading: #ffffff;
+  --color-text-navigation: #ffffff;
+}
+
+html.dark body {
+  background-color: var(--background-color);
+  color: var(--color-text-body);
+}
+
+
+/* ================================================================
+   JIM VESTIN - APP FEATURES
+   ================================================================ */
+
+.app-features {
+  min-height: 1008px;
+  display: flex;
+  align-items: center;
+  gap: 140px;
+}
+
+.feature-phone {
+  position: relative;
+  width: 308px;
+  height: 683px;
+}
+
+.features-copy {
+  width: 746px;
+}
+
+.features-copy h2 img {
+  display: block;
+  height: 40px;
+}
+
+/* App Features title in dark mode */
+
+html.dark .features-copy h2 img {
+  filter: invert(1);
+}
+
+.features-copy > .muted {
+  color: #9397AD;
+  font-size: 18px;
+  line-height: 160%;
+  margin: 24px 0 52px;
+}
+
+
+/* Feature grid */
+
+.feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px 38px;
+}
+
+.feature-list article {
+  display: flex;
+  gap: 24px;
+}
+
+
+/* Feature icons */
+
+.feature-list > article > img {
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(99, 102, 241, .08);
+}
+
+
+/* Icons that already contain their own background */
+
+.feature-list > article > img.baked {
+  padding: 0;
+  background: none;
+}
+
+
+/* Feature headings */
+
+.feature-list h3 {
+  margin: 0 0 12px;
+  color: #0B0F19;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 140%;
+}
+
+html.dark .feature-list h3 {
+  color: #ffffff;
+}
+
+
+/* Feature text */
+
+.feature-list p {
+  color: #565973;
+  font-size: 16px;
+  line-height: 160%;
+  margin: 0;
+}
+
+html.dark .feature-list p {
+  color: #ffffff;
+  opacity: .7;
+}
+
+
+/* ================================================================
+   JIM VESTIN - RESPONSIVE
+   ================================================================ */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    position: relative;
+  }
+
+  .nav-actions span,
+  .theme-toggle {
+    display: none;
+  }
+
+  .app-features {
+    display: block;
+  }
+
+  .feature-phone {
+    margin: 80px auto;
+  }
+
+  .features-copy {
+    width: auto;
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+
 }
