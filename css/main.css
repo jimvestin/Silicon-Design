@@ -1,5 +1,5 @@
 /* ===================================================================
-   Jim Vestin - Base styles
+   Jim Vestin
    =================================================================== */
 
 :root {
@@ -461,403 +461,210 @@ html.dark .feature-list p {
 }
 
 
-/* ===================================================================
-   Jim Vestin - How Does It Work
-   =================================================================== */
+/* ================================================================
+   JIM VESTIN - BRAND / HEADER
+   ================================================================ */
 
-.how,
-.testimonials {
-  background: var(--bg-alt);
-  text-align: center;
-  padding: 96px 0;
-}
-
-.how h2 {
-  font-size: 32px;
-}
-
-.phone-row {
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  gap: 76px;
-  height: 455px;
-  margin: 36px 0;
-}
-
-.mini-device {
-  position: relative;
-  width: 220px;
-  height: 445px;
-}
-
-.mini-device > img:first-child {
-  position: absolute;
-  inset: 11px;
-  width: calc(100% - 22px);
-  height: calc(100% - 22px);
-  border-radius: 20px;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.mini-device .frame {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.how h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.how-copy {
-  color: var(--muted);
-  max-width: 636px;
-  margin: auto;
-}
-
-
-/* ===================================================================
-   Jim Vestin - Benefits
-   =================================================================== */
-
-.benefits {
-  padding: 100px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 110px 60px;
-  align-items: center;
-}
-
-.benefits > img,
-.benefit-graphic {
-  max-width: 100%;
-  height: 400px;
-  object-fit: contain;
-}
-
-.benefit-graphic {
-  position: relative;
-}
-
-.benefit-graphic > img:first-child {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.benefit-graphic .overlay {
-  position: absolute;
-  right: -24px;
-  bottom: -24px;
-  height: auto;
-  width: 56%;
-  max-height: none;
-  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, .35));
-}
-
-.benefit-copy h2 {
-  font-size: 32px;
-}
-
-.benefit-copy ul {
-  padding: 0;
-  list-style: none;
-  color: var(--muted);
-  margin: 28px 0;
-}
-
-.benefit-copy li {
-  margin: 12px 0;
-}
-
-.benefit-copy li::before {
-  content: "✓";
-  color: #22c55e;
-  margin-right: 8px;
-}
-
-.benefit-cards {
-  display: flex;
-  gap: 40px;
-  color: var(--muted);
-}
-
-.benefit-cards p {
-  width: 50%;
-}
-
-.benefit-cards img {
-  display: block;
-  width: 28px;
-  height: 28px;
-  margin-bottom: 16px;
-}
-
-
-/* ===================================================================
-   Jim Vestin - Testimonials
-   =================================================================== */
-
-.testimonials {
-  padding: 80px 0 90px;
-  text-align: left;
-}
-
-.testimonial-layout {
-  display: grid;
-  grid-template-columns: 330px 1fr;
-  gap: 24px;
-}
-
-.testimonial-layout h2 {
-  font-size: 40px;
-}
-
-.reviews {
-  display: flex;
-  gap: 24px;
-}
-
-.reviews blockquote {
-  flex: 1;
-  position: relative;
-  margin: 20px 0 0;
-  padding: 48px 24px 24px;
-  background: var(--panel);
-  border-radius: 8px;
-  box-shadow: 0 12px 32px rgba(23, 25, 35, .06);
-}
-
-.quote {
-  position: absolute;
-  top: -28px;
-  width: 44px;
-  height: 44px;
-  padding: 12px;
-  border-radius: 6px;
-  background: var(--brand);
-}
-
-.quote img {
-  width: 20px;
-}
-
-.stars {
-  color: #ffba08;
-}
-
-.reviews blockquote > p {
-  color: var(--muted);
-  font-size: 18px;
-}
-
-.reviews footer {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-
-.reviews footer img {
-  width: 48px;
-  height: 48px;
-  border-radius: 4px;
-  object-fit: cover;
-}
-
-.reviews small {
-  display: block;
-  color: var(--muted);
-  font-weight: 400;
-}
-
-
-/* ===================================================================
-   Jim Vestin - FAQ
-   =================================================================== */
-
-.faq {
-  padding: 105px 0;
-  display: grid;
-  grid-template-columns: 416px 1fr;
-  gap: 135px;
-}
-
-.faq h2 {
-  font-size: 32px;
-}
-
-.contact-cards {
-  display: flex;
-  gap: 24px;
-  margin-top: 56px;
-}
-
-.contact-cards p {
-  width: 196px;
-  padding: 24px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  font-size: 14px;
-}
-
-.contact-cards p img {
-  width: 28px;
-  height: 28px;
-  margin-bottom: 4px;
-}
-
-.contact-cards a {
-  display: block;
-  color: var(--brand);
-  margin-top: 16px;
-}
-
-.accordion details {
-  background: #FFF;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  padding: 16px 24px;
-  box-shadow:
-    0 4.4px 12px -1px rgba(19, 16, 34, .06),
-    0 2px 6.4px -1px rgba(19, 16, 34, .03);
-}
-
-html.dark .accordion details {
-  background: #33354D;
-  box-shadow: none;
-}
-
-.accordion summary {
+.navbar {
+  height: 76px;
+  padding: 16px max(24px, calc((100vw - 1296px) / 2));
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  cursor: pointer;
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 3;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
+  height: 32px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: #565973;
   font-weight: 600;
-  list-style: none;
 }
 
-.accordion summary::-webkit-details-marker {
-  display: none;
+/* Dark mode */
+
+html.dark .nav-actions {
+  color: #ffffff;
 }
 
-.accordion .chevron {
+.theme-toggle {
+  width: 46px;
+  height: 24px;
   display: flex;
-  flex-shrink: 0;
   align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  padding: 8px;
-  border-radius: 40px;
-  background: #F3F6FF;
+  border: 1px solid #D4D7E5;
+  border-radius: 20px;
+  padding: 3px;
+  background: #fff;
+  cursor: pointer;
+  transition: background .2s;
 }
 
-.accordion .chevron img {
-  width: 20px;
-  height: 20px;
-}
-
-html.dark .accordion .chevron {
-  background: var(--panel);
-}
-
-.accordion details[open] .chevron {
+.theme-toggle i {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
   background: #6366F1;
+  transition: transform .2s;
 }
 
-.accordion p {
-  color: var(--muted);
-  font-size: 14px;
-  margin: 16px 0 0;
+html.dark .theme-toggle {
+  background: #2b2d42;
 }
 
+html.dark .theme-toggle i {
+  transform: translateX(22px);
+  background: #fff;
+}
 
-/* ===================================================================
-   Jim Vestin - Subscribe
-   =================================================================== */
-
-.subscribe {
-  min-height: 222px;
-  border-radius: 8px;
-  background: var(--bg-alt);
+.sign-in {
   display: flex;
-  gap: 32px;
   align-items: center;
-  padding: 50px 110px;
 }
 
-.subscribe > img {
-  width: 78px;
-  height: 78px;
+.sign-in img {
+  display: block;
+  height: 44px;
 }
 
-.subscribe h3 {
-  width: 416px;
-  font-size: 24px;
+
+/* ================================================================
+   JIM VESTIN - DARK MODE
+   ================================================================ */
+
+html.dark {
+  --background-color: #0B0F19;
+  --color-text-body: #ffffff;
+  --color-text-heading: #ffffff;
+  --color-text-navigation: #ffffff;
+}
+
+html.dark body {
+  background-color: var(--background-color);
+  color: var(--color-text-body);
+}
+
+
+/* ================================================================
+   JIM VESTIN - APP FEATURES
+   ================================================================ */
+
+.app-features {
+  min-height: 1008px;
+  display: flex;
+  align-items: center;
+  gap: 140px;
+}
+
+.feature-phone {
+  position: relative;
+  width: 308px;
+  height: 683px;
+}
+
+.features-copy {
+  width: 746px;
+}
+
+.features-copy h2 img {
+  display: block;
+  height: 40px;
+}
+
+/* App Features title in dark mode */
+
+html.dark .features-copy h2 img {
+  filter: invert(1);
+}
+
+.features-copy > .muted {
+  color: #9397AD;
+  font-size: 18px;
+  line-height: 160%;
+  margin: 24px 0 52px;
+}
+
+
+/* Feature grid */
+
+.feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px 38px;
+}
+
+.feature-list article {
+  display: flex;
+  gap: 24px;
+}
+
+
+/* Feature icons */
+
+.feature-list > article > img {
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(99, 102, 241, .08);
+}
+
+
+/* Icons that already contain their own background */
+
+.feature-list > article > img.baked {
+  padding: 0;
+  background: none;
+}
+
+
+/* Feature headings */
+
+.feature-list h3 {
+  margin: 0 0 12px;
+  color: #0B0F19;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 140%;
+}
+
+html.dark .feature-list h3 {
+  color: #ffffff;
+}
+
+
+/* Feature text */
+
+.feature-list p {
+  color: #565973;
+  font-size: 16px;
+  line-height: 160%;
   margin: 0;
 }
 
-.subscribe form {
-  height: 52px;
-  width: 472px;
-  display: flex;
-  margin-left: auto;
-}
-
-.subscribe label {
-  flex: 1;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  padding: 0 15px;
-  border: 1px solid var(--line);
-  border-radius: 8px 0 0 8px;
-}
-
-.subscribe label img {
-  width: 20px;
-}
-
-.subscribe input {
-  width: 100%;
-  border: 0;
-  outline: 0;
-  color: var(--ink);
-  background: transparent;
-  font: 16px Manrope;
-}
-
-.subscribe button {
-  border: 0;
-  border-radius: 0 8px 8px 0;
-  padding: 0 32px;
-  color: #fff;
-  background: var(--brand);
-  font: 600 16px Manrope;
+html.dark .feature-list p {
+  color: #ffffff;
+  opacity: .7;
 }
 
 
-/* ===================================================================
-   Jim Vestin - Footer
-   =================================================================== */
-
-footer {
-  text-align: center;
-  padding: 55px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-
-/* ===================================================================
-   Responsive - tablet / mobile
-   =================================================================== */
+/* ================================================================
+   JIM VESTIN - RESPONSIVE
+   ================================================================ */
 
 @media (max-width: 900px) {
 
@@ -870,41 +677,7 @@ footer {
     display: none;
   }
 
-  .hero {
-    min-height: 0;
-    overflow: hidden;
-  }
-
-  .hero-content {
-    height: auto;
-    min-height: 820px;
-    padding-bottom: 40px;
-  }
-
-  .hero-copy {
-    margin-top: 100px;
-  }
-
-  .hero-phones {
-    left: 50%;
-    top: 340px;
-    transform: translateX(-50%) scale(.55);
-    transform-origin: top center;
-  }
-
-  .logos {
-    grid-template-columns: repeat(3, 1fr);
-    height: auto;
-    margin-top: 0;
-  }
-
-  .logos img {
-    height: 70px;
-  }
-
-  .app-features,
-  .faq,
-  .testimonial-layout {
+  .app-features {
     display: block;
   }
 
@@ -919,67 +692,12 @@ footer {
   .feature-list {
     grid-template-columns: 1fr;
   }
-
-  .benefits {
-    padding-inline: 0;
-    grid-template-columns: 1fr;
-  }
-
-  .benefit-graphic .overlay {
-    right: 0;
-  }
-
-  .subscribe {
-    padding: 32px;
-    flex-wrap: wrap;
-  }
-
-  .subscribe form {
-    width: 100%;
-  }
-
-  .reviews {
-    flex-direction: column;
-  }
 }
-
-
-/* ===================================================================
-   Mobile
-   =================================================================== */
 
 @media (max-width: 560px) {
 
-  h1 {
-    font-size: 40px;
+  .feature-list {
+    grid-template-columns: 1fr;
   }
 
-  .stores {
-    flex-wrap: wrap;
-  }
-
-  .stores a {
-    width: 100%;
-  }
-
-  .logos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .benefit-cards {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .benefit-cards p {
-    width: 100%;
-  }
-
-  .contact-cards {
-    flex-wrap: wrap;
-  }
-
-  .contact-cards p {
-    width: 100%;
-  }
 }
