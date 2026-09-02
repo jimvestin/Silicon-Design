@@ -135,40 +135,44 @@ html.dark .nav-actions {
   height: 24px;
   display: flex;
   align-items: center;
-  border: 1px solid var(--line);
+  border: 0;
   border-radius: 20px;
-  padding: 3px;
-  background: #fff;
+  padding: 2px;
+  background: #9397ad;
   cursor: pointer;
   transition: background .2s;
 }
 
 .theme-toggle i {
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: #6366f1;
+  background: #fff;
   transition: transform .2s;
 }
 
 html.dark .theme-toggle {
-  background: #2b2d42;
+  background: #6366f1;
 }
 
 html.dark .theme-toggle i {
-  transform: translateX(22px);
+  transform: translateX(20px);
   background: #fff;
 }
 
 .sign-in {
-  display: flex;
+  display: inline-flex;
+  padding: 0;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 4px;
+  background: transparent;
 }
 
 .sign-in img {
   display: block;
-  height: 44px;
 }
 
 .button {
@@ -500,45 +504,59 @@ html.dark .nav-actions {
   color: #ffffff;
 }
 
+.nav-actions > span:first-child {
+  color: var(--Gray-700, #565973);
+  font-family: Manrope, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  font-feature-settings: 'liga' off, 'clig' off;
+}
+
 .theme-toggle {
   width: 46px;
   height: 24px;
   display: flex;
   align-items: center;
-  border: 1px solid #D4D7E5;
+  border: 0;
   border-radius: 20px;
-  padding: 3px;
-  background: #fff;
+  padding: 2px;
+  background: #9397AD;
   cursor: pointer;
   transition: background .2s;
 }
 
 .theme-toggle i {
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: #6366F1;
+  background: #fff;
   transition: transform .2s;
 }
 
 html.dark .theme-toggle {
-  background: #2b2d42;
+  background: #6366F1;
 }
 
 html.dark .theme-toggle i {
-  transform: translateX(22px);
+  transform: translateX(20px);
   background: #fff;
 }
 
-.sign-in {
-  display: flex;
+  .sign-in {
+  display: inline-flex;
+  padding: 0;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 4px;
+  background: transparent;
 }
 
 .sign-in img {
   display: block;
-  height: 44px;
 }
 
 
