@@ -46,6 +46,8 @@ a {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .wrap {
@@ -69,11 +71,11 @@ h3 {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: clamp(32px, 5vw + 12px, 56px);
 }
 
 h2 {
-  font-size: 40px;
+  font-size: clamp(26px, 3vw + 12px, 40px);
 }
 
 .muted {
@@ -200,6 +202,16 @@ html.dark .theme-toggle i {
     );
 }
 
+html.dark .hero {
+  background:
+    radial-gradient(
+      120.91% 118.4% at 50% 100%,
+      rgba(99, 102, 241, .10) 0%,
+      rgba(218, 70, 239, .05) 41.83%,
+      rgba(241, 244, 253, .07) 82.52%
+    );
+}
+
 .hero-content {
   height: 876px;
   display: flex;
@@ -226,6 +238,18 @@ html.dark .theme-toggle i {
 .stores {
   display: flex;
   gap: 24px;
+}
+
+.stores .store-dark {
+  display: none;
+}
+
+html.dark .stores .store-light {
+  display: none;
+}
+
+html.dark .stores .store-dark {
+  display: block;
 }
 
 .stores a {
@@ -684,38 +708,185 @@ html.dark .feature-list p {
    JIM VESTIN - RESPONSIVE
    ================================================================ */
 
+/* Large / tablet: shrink hero column widths so they never overflow */
+@media (max-width: 1200px) {
+
+  .hero-copy {
+    width: 46%;
+    min-width: 320px;
+  }
+
+  .hero-phones {
+    left: 48%;
+    width: 52%;
+  }
+
+  .app-features {
+    gap: 60px;
+  }
+
+  .features-copy {
+    width: auto;
+    flex: 1;
+  }
+}
+
+/* Tablet / small laptop: stack hero + features vertically */
 @media (max-width: 900px) {
 
   .navbar {
     position: relative;
   }
 
-  .nav-actions span,
-  .theme-toggle {
+  .nav-actions > span:first-child {
     display: none;
   }
 
+  /* --- Hero --- */
+
+  .hero {
+    min-height: auto;
+    padding: 132px 0 64px;
+  }
+
+  .hero-content {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 56px;
+  }
+
+  .hero-copy {
+    margin-top: 0;
+    width: 100%;
+    max-width: 480px;
+    min-width: 0;
+  }
+
+  .stores {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-phones {
+    position: relative;
+    inset: auto;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    aspect-ratio: 402 / 813;
+    margin: 0 auto;
+  }
+
+  .tilted {
+    display: none;
+  }
+
+  .hero-device {
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* --- Partner logos --- */
+
+  .logos {
+    height: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 56px;
+  }
+
+  .logos img {
+    padding: 20px;
+  }
+
+  /* --- App features --- */
+
   .app-features {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    padding: 64px 0;
+    gap: 48px;
   }
 
   .feature-phone {
-    margin: 80px auto;
+    width: min(308px, 70vw);
+    height: auto;
+    aspect-ratio: 308 / 683;
+    margin: 0 auto;
   }
 
   .features-copy {
-    width: auto;
+    width: 100%;
   }
 
   .feature-list {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 }
 
+/* Mobile */
 @media (max-width: 560px) {
+
+  .navbar {
+    padding: 16px;
+  }
+
+  .sign-in img {
+    height: 36px;
+    width: auto;
+  }
+
+  .hero-copy > p {
+    font-size: 16px;
+    margin: 16px 0 32px;
+  }
+
+  .stores a {
+    width: 160px;
+    height: 46px;
+  }
+
+  .logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .feature-list {
     grid-template-columns: 1fr;
   }
 
+  .feature-list article {
+    gap: 16px;
+  }
+
+  .feature-list > article > img {
+    width: 48px;
+    height: 48px;
+    padding: 14px;
+    flex-shrink: 0;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+
+  .stores {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stores a {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .feature-phone {
+    width: 85vw;
+  }
 }
