@@ -715,7 +715,29 @@ html.dark .feature-list p {
   }
 
 }
+/* How does it work end*/
 
+/* App features, Markus*/
+
+.container3{
+  display: grid;
+  color: var(--ink);
+  max-width:25ch;
+  
+ 
+
+}
+.h2money{
+
+  font-size: 32px;
+}
+li{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
 
 
 
