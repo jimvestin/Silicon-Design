@@ -10,6 +10,8 @@
   --panel: #ffffff;
   --line: #E7E7F0;
   --brand: #6366f1;
+
+  --section-spacing: 4rem;
 }
 
 html.dark {
@@ -678,6 +680,46 @@ html.dark .feature-list p {
   color: #ffffff;
   opacity: .7;
 }
+
+
+/* How does it work, Markus */
+
+.howdoes-section {
+  padding-block: var(--section-spacing);
+  margin-top: 2rem;
+  background-color: var(--bg-alt);
+  text-align: center;
+.howdoes{
+  display: flex;
+  justify-content: space-evenly;
+  padding-block: var(--section-spacing);
+}
+.text-how{
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 70ch;
+  margin-inline: auto;
+
+}
+.h4{
+  font-size: 24px;
+  color:var(--ink);
+
+}
+
+@media (width <768px ) {
+  .Pic-how:first-of-type,
+  .Pic-how:last-of-type{
+  display: none;
+    }
+  }
+
+}
+
+
+
+
+
 
 
 /* ================================================================

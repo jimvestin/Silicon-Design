@@ -1,384 +1,247 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Silicon mobile banking application" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Silicon mobile banking application" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
 
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/css/main.css" />
 
-  <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
-    rel="stylesheet">
+    <title>Silicon</title>
+  </head>
 
-  <title>Silicon</title>
-</head>
-
-<body>
-
-  <!-- =====================================================
+  <body>
+    <!-- =====================================================
        JIM VESTIN - HEADER / NAVIGATION
        ===================================================== -->
 
-  <header class="navbar">
+    <header class="navbar">
+      <a class="logo" href="#top">
+        <img class="logo-light" src="assets/logo.svg" alt="Silicon" />
 
-    <a class="logo" href="#top">
-
-      <img
-        class="logo-light"
-        src="assets/logo.svg"
-        alt="Silicon"
-      />
-
-      <img
-        class="logo-dark"
-        src="assets/logo-dark.svg"
-        alt="Silicon"
-      />
-
-    </a>
-
-    <div class="nav-actions">
-
-      <span>Dark Mode</span>
-
-      <span
-        class="theme-toggle"
-        aria-hidden="true"
-      >
-        <i></i>
-      </span>
-
-      <a
-        class="sign-in"
-        href="#faq"
-      >
-        <img
-          src="assets/btn.png"
-          alt="Sign in / up"
-        />
+        <img class="logo-dark" src="assets/logo-dark.svg" alt="Silicon" />
       </a>
 
-    </div>
+      <div class="nav-actions">
+        <span>Dark Mode</span>
 
-  </header>
+        <span class="theme-toggle" aria-hidden="true">
+          <i></i>
+        </span>
 
+        <a class="sign-in" href="#faq">
+          <img src="assets/btn.png" alt="Sign in / up" />
+        </a>
+      </div>
+    </header>
 
-  <main id="top">
-
-    <!-- =====================================================
+    <main id="top">
+      <!-- =====================================================
          JIM VESTIN - HERO
          ===================================================== -->
 
-    <section class="hero">
+      <section class="hero">
+        <div class="wrap hero-content">
+          <div class="hero-copy">
+            <h1>Manage All Your Money in One App</h1>
 
-      <div class="wrap hero-content">
+            <p>
+              We offer you a new generation of the mobile banking.<br />
+              Save, spend &amp; manage money in your pocket.
+            </p>
 
-        <div class="hero-copy">
+            <!-- App Store / Google Play -->
+            <div class="stores">
+              <a href="#download">
+                <img
+                  src="assets/appstore.svg"
+                  alt="Download on the App Store"
+                />
+              </a>
 
-          <h1>
-            Manage All Your Money in One App
-          </h1>
+              <a href="#download">
+                <img src="assets/googleplay.svg" alt="Get it on Google Play" />
+              </a>
+            </div>
+          </div>
 
-          <p>
-            We offer you a new generation of the mobile banking.<br />
-            Save, spend &amp; manage money in your pocket.
-          </p>
-
-          <!-- App Store / Google Play -->
-          <div class="stores">
-
-            <a href="#download">
+          <div class="hero-phones">
+            <div class="device tilted baked">
               <img
-                src="assets/appstore.svg"
-                alt="Download on the App Store"
+                src="assets/hero-tilted-device.png"
+                alt="My budget overview"
               />
-            </a>
+            </div>
 
-            <a href="#download">
+            <div class="device hero-device">
               <img
-                src="assets/googleplay.svg"
-                alt="Get it on Google Play"
+                src="assets/hero-front-screen.png"
+                alt="Silicon banking app dashboard"
               />
-            </a>
 
+              <img class="frame" src="assets/hero-phone.png" alt="" />
+            </div>
           </div>
-
         </div>
+      </section>
 
-
-        <div class="hero-phones">
-
-          <div class="device tilted baked">
-
-            <img
-              src="assets/hero-tilted-device.png"
-              alt="My budget overview"
-            />
-
-          </div>
-
-
-          <div class="device hero-device">
-
-            <img
-              src="assets/hero-front-screen.png"
-              alt="Silicon banking app dashboard"
-            />
-
-            <img
-              class="frame"
-              src="assets/hero-phone.png"
-              alt=""
-            />
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
+      <!-- =====================================================
          JIM VESTIN - PARTNER / BRAND LOGOS
          ===================================================== -->
 
-    <section
-      class="logos wrap"
-      aria-label="Partner companies"
-    >
+      <section class="logos wrap" aria-label="Partner companies">
+        <img src="assets/logo-1.svg" alt="Partner logo" />
 
-      <img
-        src="assets/logo-1.svg"
-        alt="Partner logo"
-      />
+        <img src="assets/logo-2.svg" alt="Partner logo" />
 
-      <img
-        src="assets/logo-2.svg"
-        alt="Partner logo"
-      />
+        <img src="assets/logo-3.svg" alt="Partner logo" />
 
-      <img
-        src="assets/logo-3.svg"
-        alt="Partner logo"
-      />
+        <img src="assets/logo-4.svg" alt="Partner logo" />
 
-      <img
-        src="assets/logo-4.svg"
-        alt="Partner logo"
-      />
+        <img src="assets/logo-5.svg" alt="Partner logo" />
 
-      <img
-        src="assets/logo-5.svg"
-        alt="Partner logo"
-      />
+        <img src="assets/logo-6.svg" alt="Partner logo" />
+      </section>
 
-      <img
-        src="assets/logo-6.svg"
-        alt="Partner logo"
-      />
-
-    </section>
-
-
-    <!-- =====================================================
+      <!-- =====================================================
          JIM VESTIN - APP FEATURES
          ===================================================== -->
 
-    <section class="app-features wrap">
-
-      <div class="feature-phone device baked">
-
-        <img
-          src="assets/feature-device.png"
-          alt="Mobile payment screen"
-        />
-
-      </div>
-
-
-      <div class="features-copy">
-
-        <h2>
-
-          <img
-            src="assets/app-features-title.png"
-            alt="App Features"
-          />
-
-        </h2>
-
-
-        <p class="muted">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Proin volutpat mollis egestas. Nam luctus facilisis ultrices.
-          Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.
-        </p>
-
-
-        <div class="feature-list">
-
-          <article>
-
-            <img
-              src="assets/icon-card.svg"
-              alt=""
-            />
-
-            <div>
-
-              <h3>
-                Easy Payments
-              </h3>
-
-              <p>
-                Id mollis consectetur congue egestas egestas
-                suspendisse blandit justo.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article>
-
-            <img
-              src="assets/icon-shield.svg"
-              alt=""
-            />
-
-            <div>
-
-              <h3>
-                Data Security
-              </h3>
-
-              <p>
-                Augue pulvinar justo, fermentum fames aliquam
-                accumsan vestibulum non.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article>
-
-            <img
-              src="assets/icon-cost.png"
-              class="baked"
-              alt=""
-            />
-
-            <div>
-
-              <h3>
-                Cost Statistics
-              </h3>
-
-              <p>
-                Mattis urna ultricies non amet, purus in auctor non.
-                Odio vulputate ac nibh.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article>
-
-            <img
-              src="assets/icon-support.png"
-              class="baked"
-              alt=""
-            />
-
-            <div>
-
-              <h3>
-                Support 24/7
-              </h3>
-
-              <p>
-                Faucibus cursus maecenas lorem cursus nibh.
-                Sociis sit risus id. Sit facilisis dolor arcu.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article>
-
-            <img
-              src="assets/icon-cashback.png"
-              class="baked"
-              alt=""
-            />
-
-            <div>
-
-              <h3>
-                Regular Cashback
-              </h3>
-
-              <p>
-                Sit facilisis dolor arcu, fermentum vestibulum arcu
-                elementum imperdiet eleifend.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article>
-
-            <img
-              src="assets/icon-top-standards.png"
-              class="baked"
-              alt=""
-            />
-
-            <div>
-
-              <h3>
-                Top Standards
-              </h3>
-
-              <p>
-                Nunc senectus leo vel venenatis accumsan vestibulum
-                sollicitudin amet.
-              </p>
-
-            </div>
-
-          </article>
-
+      <section class="app-features wrap">
+        <div class="feature-phone device baked">
+          <img src="assets/feature-device.png" alt="Mobile payment screen" />
         </div>
 
-      </div>
+        <div class="features-copy">
+          <h2>
+            <img src="assets/app-features-title.png" alt="App Features" />
+          </h2>
 
-    </section>
+          <p class="muted">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+            volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque
+            volutpat ligula est. Mattis fermentum, at nec lacus.
+          </p>
 
-  </main>
+          <div class="feature-list">
+            <article>
+              <img src="assets/icon-card.svg" alt="" />
 
+              <div>
+                <h3>Easy Payments</h3>
 
-  <script src="main.js"></script>
+                <p>
+                  Id mollis consectetur congue egestas egestas suspendisse
+                  blandit justo.
+                </p>
+              </div>
+            </article>
 
-</body>
+            <article>
+              <img src="assets/icon-shield.svg" alt="" />
 
+              <div>
+                <h3>Data Security</h3>
+
+                <p>
+                  Augue pulvinar justo, fermentum fames aliquam accumsan
+                  vestibulum non.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/icon-cost.png" class="baked" alt="" />
+
+              <div>
+                <h3>Cost Statistics</h3>
+
+                <p>
+                  Mattis urna ultricies non amet, purus in auctor non. Odio
+                  vulputate ac nibh.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/icon-support.png" class="baked" alt="" />
+
+              <div>
+                <h3>Support 24/7</h3>
+
+                <p>
+                  Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus
+                  id. Sit facilisis dolor arcu.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/icon-cashback.png" class="baked" alt="" />
+
+              <div>
+                <h3>Regular Cashback</h3>
+
+                <p>
+                  Sit facilisis dolor arcu, fermentum vestibulum arcu elementum
+                  imperdiet eleifend.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/icon-top-standards.png" class="baked" alt="" />
+
+              <div>
+                <h3>Top Standards</h3>
+
+                <p>
+                  Nunc senectus leo vel venenatis accumsan vestibulum
+                  sollicitudin amet.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+        <!--Markus -->
+      <section class="howdoes-section" >
+        <div class="container1">
+          <h2> How Does It Work?</h2>
+
+          <div class="howdoes">
+          <div class="Pic-how">
+            <img src="assets/iPhone 12 Pro How left.svg" alt="">
+          </div>
+          <div class="Pic-how">
+            <img src="assets/iPhone 12 Pro How middle.svg" alt="">
+          </div>
+          <div class="Pic-how">
+            <img src="assets/iPhone 12 Pro How right.svg" alt="">
+          </div>
+        </div>
+
+        <div class="text-how">
+          <h3 class="h4">Latest transaction history</h3>
+          <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum. </p>
+        </div>
+
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
 </html>
