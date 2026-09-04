@@ -718,27 +718,75 @@ html.dark .feature-list p {
 /* How does it work end*/
 
 /* App features, Markus*/
-
-.container3{
+.makyourmoney{
   display: grid;
+  height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+  background-color: var(--panel);
   color: var(--ink);
+  border: 1px solid black;
+}
+.app-money1{
+  display: grid;
+  
   max-width:25ch;
   
- 
-
-}
-.h2money{
+  
+  .h2money{
+  display: grid;
 
   font-size: 32px;
+  }
+.btn-1{
+  display:flex;
+  background-color: #6366F1;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9em;
+  border-radius: 0.375em;
+  max-width: 180px;
+  
+
+  
+
+}
+}
+.app-money2{
+  display: grid;
+  
+  max-width: 25ch;
+  
+  .btn-2{
+  display:flex;
+  background-color: #6366F1;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9em;
+  border-radius: 0.375em;
+  max-width: 180px;
+ 
+  
+  }
+  
 }
 li{
+  display:grid;
   list-style: none;
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 6px;
+ 
 }
 
+.picmoney1{
+  display: grid;
+  
+}
+.picmoney2{
+  display:grid;
+ 
+}
 
 
 
