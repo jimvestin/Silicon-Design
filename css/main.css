@@ -1,6 +1,4 @@
-/* ===================================================================
-   Jim Vestin
-   =================================================================== */
+/* Jim Vestin */
 
 :root {
   --bg: #ffffff;
@@ -83,9 +81,7 @@ h2 {
 }
 
 
-/* ===================================================================
-   Jim Vestin - Header
-   =================================================================== */
+/* Jim Vestin - Header */
 
 .navbar {
   height: 76px;
@@ -189,9 +185,7 @@ html.dark .theme-toggle i {
 }
 
 
-/* ===================================================================
-   Jim Vestin - Hero
-   =================================================================== */
+/* Jim Vestin - Hero */
 
 .hero {
   min-height: 876px;
@@ -270,9 +264,7 @@ html.dark .stores .store-dark {
 }
 
 
-/* ===================================================================
-   Hero telefon
-   =================================================================== */
+/* jim - Hero telefon */
 
 .hero-phones {
   display: grid;
@@ -309,7 +301,7 @@ html.dark .stores .store-dark {
 }
 
 
-/* Färdig telefonbild där ram + skärm finns i samma bild */
+/* jim -Färdig telefonbild där ram + skärm finns i samma bild */
 
 .device.baked {
   overflow: visible;
@@ -343,9 +335,7 @@ html.dark .stores .store-dark {
 }
 
 
-/* ===================================================================
-   Jim Vestin - Brands
-   =================================================================== */
+/* Jim Vestin - Brands */
 
 .logos {
   height: 100px;
@@ -390,9 +380,7 @@ html.dark .logos img:last-child {
 }
 
 
-/* ===================================================================
-   Jim Vestin - Features
-   =================================================================== */
+/* Jim Vestin - Features */
 
 .app-features {
   min-height: 1008px;
@@ -434,9 +422,7 @@ html.dark .features-copy > .muted {
 }
 
 
-/* ===================================================================
-   Feature grid
-   =================================================================== */
+/* jim - Feature grid */
 
 .feature-list {
   display: grid;
@@ -459,7 +445,7 @@ html.dark .features-copy > .muted {
 }
 
 
-/* Färdiga ikoner där bakgrunden finns */
+/* jim -Färdiga ikoner där bakgrunden finns */
 
 .feature-list > article > img.baked {
   padding: 0;
@@ -467,7 +453,7 @@ html.dark .features-copy > .muted {
 }
 
 
-/* Feature headings */
+/* jim Feature headings */
 
 .feature-list h3 {
   margin: 0 0 12px;
@@ -483,7 +469,7 @@ html.dark .feature-list h3 {
 }
 
 
-/* Feature text */
+/* jim - Feature text */
 
 .feature-list p {
   color: #565973;
@@ -498,10 +484,7 @@ html.dark .feature-list p {
 }
 
 
-/* ================================================================
-   MOBILE FIRST LAYOUT
-   Basen ar mobil. Storre layouter byggs pa med min-width.
-   ================================================================ */
+/* jim - MOBILE FIRST LAYOUT */
 
 .wrap {
   width: auto;
