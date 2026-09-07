@@ -1196,33 +1196,24 @@ main {
 
   .hero-content {
     display: grid;
-    grid-template-columns: repeat(12, 86px);
-    gap: 24px;
+    grid-template-columns: 550px 746px;
   }
 
   .hero-copy {
-    grid-column: 1 / span 5;
     width: 526px;
   }
 
   .hero-phones {
-    grid-column: 6 / span 7;
+    grid-column: 2;
     width: 746px;
     margin: 188px 0 0;
   }
 
   .app-features {
-    display: grid;
-    grid-template-columns: repeat(12, 64px);
-    gap: 48px;
-  }
-
-  .feature-phone {
-    grid-column: 1 / span 3;
+    gap: 140px;
   }
 
   .features-copy {
-    grid-column: 5 / span 8;
     width: 746px;
     flex: none;
   }
