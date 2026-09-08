@@ -48,7 +48,7 @@ img {
   height: auto;
 }
 
-.wrap {
+.container {
   width: 1296px;
   max-width: calc(100% - 48px);
   margin: auto;
@@ -486,7 +486,7 @@ html.dark .feature-list p {
 
 /* jim - MOBILE FIRST LAYOUT */
 
-.wrap {
+.container {
   width: auto;
   max-width: calc(100% - 32px);
 }
@@ -637,7 +637,7 @@ main {
 }
 
 @media (min-width: 561px) {
-  .wrap {
+  .container {
     max-width: calc(100% - 48px);
   }
 
@@ -768,7 +768,7 @@ main {
 }
 
 @media (min-width: 1201px) {
-  .wrap {
+  .container {
     width: 1296px;
     max-width: calc(100% - 48px);
   }
