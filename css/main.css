@@ -933,3 +933,74 @@ li{
     margin-top: 50px;
 
   }
+
+  .FAQ-Questions {
+    
+    height: 900px;
+    padding-top: 10px;
+    
+    
+}
+
+.phone-container {
+    display: grid;
+    grid-template-columns: 400px 700px;
+    width: fit-content;
+    gap: 100px;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    transform: translateX(-140px);
+}
+
+.the-left-text h2 {
+    width: 400px
+}
+
+.phoner-p {
+    width: 340px;
+    margin: 40px;
+    margin-left: 1px;
+}
+
+
+.call-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+    gap: 20px;
+}
+
+ .phones-green {
+    color: #22C55E;
+  }
+
+  .the-phones i {
+    color: #22C55E;
+    margin-left: 10px;
+  }
+
+  .phone-p {
+    margin-bottom: 20px;
+  }
+
+  .phone-purple {
+    color: #6366f1;
+  }
+
+  .the-phone i {
+     color: #6366f1;
+     margin-left: 10px;
+
+  }
+
+  .the-phone,
+  .the-phones {
+    display: grid;
+
+}
+
+.the-phone img,
+.the-phones img {
+  margin-bottom: 20px;
+}
