@@ -1,6 +1,4 @@
-/* ===================================================================
-   Jim Vestin
-   =================================================================== */
+/* Jim Vestin */
 
 :root {
   --bg: #ffffff;
@@ -48,9 +46,11 @@ a {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-.wrap {
+.container {
   width: 1296px;
   max-width: calc(100% - 48px);
   margin: auto;
@@ -71,11 +71,11 @@ h3 {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: clamp(32px, 5vw + 12px, 56px);
 }
 
 h2 {
-  font-size: 40px;
+  font-size: clamp(26px, 3vw + 12px, 40px);
 }
 
 .muted {
@@ -83,9 +83,7 @@ h2 {
 }
 
 
-/* ===================================================================
-   Jim Vestin - Header / Navigation
-   =================================================================== */
+/* Jim Vestin - Header */
 
 .navbar {
   height: 76px;
@@ -93,9 +91,12 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  inset: 0 0 auto;
+  position: relative;
   z-index: 3;
+}
+
+main {
+  margin-top: -76px;
 }
 
 .logo {
@@ -186,9 +187,7 @@ html.dark .theme-toggle i {
 }
 
 
-/* ===================================================================
-   Jim Vestin - Hero
-   =================================================================== */
+/* Jim Vestin - Hero */
 
 .hero {
   min-height: 876px;
@@ -202,9 +201,20 @@ html.dark .theme-toggle i {
     );
 }
 
+html.dark .hero {
+  background:
+    radial-gradient(
+      120.91% 118.4% at 50% 100%,
+      rgba(99, 102, 241, .10) 0%,
+      rgba(218, 70, 239, .05) 41.83%,
+      rgba(241, 244, 253, .07) 82.52%
+    );
+}
+
 .hero-content {
   height: 876px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 550px 746px;
   align-items: flex-start;
   position: relative;
 }
@@ -230,6 +240,18 @@ html.dark .theme-toggle i {
   gap: 24px;
 }
 
+.stores .store-dark {
+  display: none;
+}
+
+html.dark .stores .store-light {
+  display: none;
+}
+
+html.dark .stores .store-dark {
+  display: block;
+}
+
 .stores a {
   display: block;
   width: 180px;
@@ -244,26 +266,27 @@ html.dark .theme-toggle i {
 }
 
 
-/* ===================================================================
-   Hero phones
-   =================================================================== */
+/* jim - Hero telefon */
 
 .hero-phones {
-  position: absolute;
-  left: 550px;
-  top: 188px;
+  display: grid;
+  grid-template-columns: 115px 230px 401px;
+  grid-template-rows: 136px 552px;
+  grid-column: 2;
   width: 746px;
   height: 688px;
+  margin-top: 188px;
 }
 
 .device {
-  position: absolute;
+  display: grid;
   overflow: hidden;
 }
 
 .device > img:first-child {
-  position: absolute;
-  inset: 20px 21px;
+  grid-area: 1 / 1;
+  align-self: center;
+  justify-self: center;
   width: calc(100% - 42px);
   height: calc(100% - 40px);
   object-fit: cover;
@@ -272,8 +295,7 @@ html.dark .theme-toggle i {
 }
 
 .device .frame {
-  position: absolute;
-  inset: 0;
+  grid-area: 1 / 1;
   width: 100%;
   height: 100%;
   pointer-events: none;
@@ -281,7 +303,7 @@ html.dark .theme-toggle i {
 }
 
 
-/* Färdig telefonbild där ram + skärm redan finns i samma bild */
+/* jim -Färdig telefonbild där ram + skärm finns i samma bild */
 
 .device.baked {
   overflow: visible;
@@ -296,14 +318,17 @@ html.dark .theme-toggle i {
 }
 
 .hero-device {
-  left: 345px;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  align-self: start;
   width: 402px;
   height: 813px;
 }
 
 .tilted {
-  left: 115px;
-  top: 136px;
+  grid-column: 2 / span 2;
+  grid-row: 2;
+  align-self: start;
   width: 396px;
   height: 801px;
   transform: rotate(-9deg);
@@ -312,9 +337,7 @@ html.dark .theme-toggle i {
 }
 
 
-/* ===================================================================
-   Jim Vestin - Partner logos / Brands
-   =================================================================== */
+/* Jim Vestin - Brands */
 
 .logos {
   height: 100px;
@@ -359,9 +382,7 @@ html.dark .logos img:last-child {
 }
 
 
-/* ===================================================================
-   Jim Vestin - App Features
-   =================================================================== */
+/* Jim Vestin - Features */
 
 .app-features {
   min-height: 1008px;
@@ -403,9 +424,7 @@ html.dark .features-copy > .muted {
 }
 
 
-/* ===================================================================
-   Feature grid
-   =================================================================== */
+/* jim - Feature grid */
 
 .feature-list {
   display: grid;
@@ -428,7 +447,7 @@ html.dark .features-copy > .muted {
 }
 
 
-/* Färdiga ikoner där bakgrunden redan finns */
+/* jim -Färdiga ikoner där bakgrunden finns */
 
 .feature-list > article > img.baked {
   padding: 0;
@@ -436,7 +455,7 @@ html.dark .features-copy > .muted {
 }
 
 
-/* Feature headings */
+/* jim Feature headings */
 
 .feature-list h3 {
   margin: 0 0 12px;
@@ -452,7 +471,7 @@ html.dark .feature-list h3 {
 }
 
 
-/* Feature text */
+/* jim - Feature text */
 
 .feature-list p {
   color: #565973;
@@ -467,220 +486,215 @@ html.dark .feature-list p {
 }
 
 
-/* ================================================================
-   JIM VESTIN - BRAND / HEADER
-   ================================================================ */
+/* jim - MOBILE FIRST LAYOUT */
 
-.navbar {
-  height: 76px;
-  padding: 16px max(24px, calc((100vw - 1296px) / 2));
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  inset: 0 0 auto;
-  z-index: 3;
+.container {
+  width: auto;
+  max-width: calc(100% - 32px);
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  display: block;
-  height: 32px;
-}
-
-.nav-actions {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  color: #565973;
-  font-weight: 600;
-}
-
-/* Dark mode */
-
-html.dark .nav-actions {
-  color: #ffffff;
-}
-
-.nav-actions > span:first-child {
-  color: var(--Gray-700, #565973);
-  font-family: Manrope, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 160%;
-  font-feature-settings: 'liga' off, 'clig' off;
-}
-
-.theme-toggle {
-  width: 46px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  border: 0;
-  border-radius: 20px;
-  padding: 2px;
-  background: #9397AD;
-  cursor: pointer;
-  transition: background .2s;
-}
-
-.theme-toggle i {
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #fff;
-  transition: transform .2s;
-}
-
-html.dark .theme-toggle {
-  background: #6366F1;
-}
-
-html.dark .theme-toggle i {
-  transform: translateX(20px);
-  background: #fff;
-}
-
-  .sign-in {
-  display: inline-flex;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border-radius: 4px;
-  background: transparent;
-}
-
-.sign-in img {
-  display: block;
-}
-
-
-/* ================================================================
-   JIM VESTIN - DARK MODE
-   ================================================================ */
-
-html.dark {
-  --background-color: #0B0F19;
-  --color-text-body: #ffffff;
-  --color-text-heading: #ffffff;
-  --color-text-navigation: #ffffff;
-}
-
-html.dark body {
-  background-color: var(--background-color);
-  color: var(--color-text-body);
-}
-
-
-/* ================================================================
-   JIM VESTIN - APP FEATURES
-   ================================================================ */
-
-.app-features {
-  min-height: 1008px;
-  display: flex;
-  align-items: center;
-  gap: 140px;
-}
-
-.feature-phone {
-  position: relative;
-  width: 308px;
-  height: 683px;
-}
-
-.features-copy {
-  width: 746px;
-}
-
-.features-copy h2 img {
-  display: block;
-  height: 40px;
-}
-
-/* App Features title in dark mode */
-
-html.dark .features-copy h2 img {
-  filter: invert(1);
-}
-
-.features-copy > .muted {
-  color: #9397AD;
-  font-size: 18px;
-  line-height: 160%;
-  margin: 24px 0 52px;
-}
-
-
-/* Feature grid */
-
-.feature-list {
+.grid-12 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 44px 38px;
-}
-
-.feature-list article {
-  display: flex;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 24px;
 }
 
+.navbar {
+  height: 76px;
+  padding: 16px;
+  position: static;
+}
 
-/* Feature icons */
+.sign-in img {
+  height: 36px;
+  width: auto;
+}
+
+main {
+  margin-top: 0;
+}
+
+.nav-actions > span:first-child {
+  display: none;
+}
+
+.hero {
+  min-height: auto;
+  padding: 132px 0 64px;
+}
+
+.hero-content {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  text-align: center;
+}
+
+.hero-copy {
+  width: 100%;
+  max-width: 480px;
+  min-width: 0;
+  margin-top: 0;
+}
+
+.hero-copy > p {
+  font-size: 16px;
+  margin: 16px 0 32px;
+}
+
+.stores {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stores a {
+  width: 160px;
+  height: 46px;
+}
+
+.hero-phones {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column: auto;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  aspect-ratio: 402 / 813;
+  margin: 0 auto;
+}
+
+.tilted {
+  display: none;
+}
+
+.hero-device {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.logos {
+  height: auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 56px;
+}
+
+.logos img {
+  padding: 20px;
+}
+
+.app-features {
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+  padding: 64px 0;
+  gap: 48px;
+}
+
+.feature-phone {
+  width: min(308px, 70vw);
+  height: auto;
+  aspect-ratio: 308 / 683;
+  margin: 0 auto;
+}
+
+.features-copy {
+  width: 100%;
+}
+
+.feature-list {
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.feature-list article {
+  gap: 16px;
+}
 
 .feature-list > article > img {
-  width: 60px;
-  height: 60px;
-  padding: 20px;
-  border-radius: 8px;
-  background: rgba(99, 102, 241, .08);
+  width: 48px;
+  height: 48px;
+  padding: 14px;
+  flex-shrink: 0;
 }
 
+@media (max-width: 400px) {
+  .stores {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* Icons that already contain their own background */
+  .stores a {
+    width: 100%;
+    max-width: 220px;
+  }
 
-.feature-list > article > img.baked {
-  padding: 0;
-  background: none;
+  .feature-phone {
+    width: 85vw;
+  }
 }
 
+@media (min-width: 561px) {
+  .container {
+    max-width: calc(100% - 48px);
+  }
 
-/* Feature headings */
+  .navbar {
+    padding: 16px max(24px, calc((100vw - 1296px) / 2));
+  }
 
-.feature-list h3 {
-  margin: 0 0 12px;
-  color: #0B0F19;
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 140%;
+  .hero-copy > p {
+    font-size: 18px;
+    margin: 24px 0 48px;
+  }
+
+  .stores a {
+    width: 180px;
+    height: 52px;
+  }
+
+  .logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-html.dark .feature-list h3 {
-  color: #ffffff;
-}
+@media (min-width: 901px) {
+  .navbar {
+    position: relative;
+  }
 
+  main {
+    margin-top: -76px;
+  }
 
-/* Feature text */
+  .nav-actions > span:first-child {
+    display: inline;
+  }
 
-.feature-list p {
-  color: #565973;
-  font-size: 16px;
-  line-height: 160%;
-  margin: 0;
-}
+  .hero {
+    min-height: 876px;
+    padding: 0;
+  }
 
-html.dark .feature-list p {
-  color: #ffffff;
-  opacity: .7;
-}
+  .hero-content {
+    height: 876px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+    text-align: left;
+  }
 
+  .hero-copy {
+    width: 46%;
+    min-width: 320px;
+    max-width: none;
+    margin-top: 224px;
+  }
 
 /* How does it work, Markus */
 
@@ -796,38 +810,104 @@ li{
    JIM VESTIN - RESPONSIVE
    ================================================================ */
 
-@media (max-width: 900px) {
-
-  .navbar {
-    position: relative;
+  .tilted {
+    display: grid;
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    align-self: start;
   }
 
-  .nav-actions span,
-  .theme-toggle {
-    display: none;
+  .hero-device {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: start;
+    width: 402px;
+    height: 813px;
+  }
+
+  .logos {
+    height: 100px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+    margin-top: 96px;
+  }
+
+  .logos img {
+    padding: 35px 38px 35px 39px;
   }
 
   .app-features {
-    display: block;
+    flex-direction: row;
+    align-items: center;
+    min-height: 1008px;
+    padding: 0;
+    gap: 60px;
   }
 
   .feature-phone {
-    margin: 80px auto;
+    width: 308px;
+    height: 683px;
+    aspect-ratio: auto;
+    margin: 0;
   }
 
   .features-copy {
     width: auto;
+    flex: 1;
   }
 
   .feature-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 44px 38px;
+  }
+
+  .feature-list article {
+    gap: 24px;
+  }
+
+  .feature-list > article > img {
+    width: 60px;
+    height: 60px;
+    padding: 20px;
   }
 }
 
-@media (max-width: 560px) {
-
-  .feature-list {
-    grid-template-columns: 1fr;
+@media (min-width: 1201px) {
+  .container {
+    width: 1296px;
+    max-width: calc(100% - 48px);
   }
 
+  .hero-content {
+    display: grid;
+    grid-template-columns: repeat(12, 86px);
+    gap: 24px;
+  }
+
+  .hero-copy {
+    grid-column: 1 / span 5;
+    width: 526px;
+  }
+
+  .hero-phones {
+    grid-column: 6 / span 7;
+    width: 746px;
+    margin: 188px 0 0;
+  }
+
+  .app-features {
+    display: grid;
+    grid-template-columns: repeat(12, 64px);
+    gap: 48px;
+  }
+
+  .feature-phone {
+    grid-column: 1 / span 3;
+  }
+
+  .features-copy {
+    grid-column: 5 / span 8;
+    width: 746px;
+    flex: none;
+  }
 }
