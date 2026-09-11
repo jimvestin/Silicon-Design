@@ -212,9 +212,9 @@ html.dark .hero {
 .hero-content {
   height: 876px;
   display: grid;
-  grid-template-columns: 550px 746px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
   align-items: flex-start;
-  position: relative;
 }
 
 .hero-copy {
@@ -225,6 +225,8 @@ html.dark .hero {
 
 .hero-copy h1 {
   color: var(--ink);
+  font-size: 56px;
+  width: 526px;
 }
 
 .hero-copy > p {
@@ -267,13 +269,15 @@ html.dark .stores .store-dark {
 /* jim - Hero telefon */
 
 .hero-phones {
-  display: grid;
-  grid-template-columns: 115px 230px 401px;
-  grid-template-rows: 136px 552px;
-  grid-column: 2;
+  grid-column: span 7;
   width: 746px;
-  height: 688px;
   margin-top: 188px;
+}
+
+.hero-phones img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .device {
@@ -537,6 +541,11 @@ main {
   margin-top: 0;
 }
 
+.hero-copy h1 {
+  font-size: clamp(32px, 5vw + 12px, 56px);
+  width: 100%;
+}
+
 .hero-copy > p {
   font-size: 16px;
   margin: 16px 0 32px;
@@ -553,25 +562,15 @@ main {
 }
 
 .hero-phones {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-column: auto;
   width: 100%;
-  max-width: 340px;
-  height: auto;
-  aspect-ratio: 402 / 813;
+  max-width: 746px;
   margin: 0 auto;
 }
 
-.tilted {
-  display: none;
-}
-
-.hero-device {
-  grid-column: 1;
-  grid-row: 1;
+.hero-phones img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .logos {
@@ -682,44 +681,25 @@ main {
 
   .hero-content {
     height: 876px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 24px;
     align-items: flex-start;
-    gap: 0;
     text-align: left;
   }
 
   .hero-copy {
-    width: 46%;
-    min-width: 320px;
+    grid-column: span 5;
+    width: 100%;
     max-width: none;
     margin-top: 224px;
   }
 
   .hero-phones {
-    display: grid;
-    grid-template-columns: 115px 230px 401px;
-    grid-template-rows: 136px 552px;
-    width: 52%;
+    grid-column: span 7;
+    width: 100%;
     max-width: none;
-    height: 688px;
-    aspect-ratio: auto;
-    margin: 188px 0 0 2%;
-  }
-
-  .tilted {
-    display: grid;
-    grid-column: 2 / span 2;
-    grid-row: 2;
-    align-self: start;
-  }
-
-  .hero-device {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    align-self: start;
-    width: 402px;
-    height: 813px;
+    margin: 188px 0 0;
   }
 
   .logos {
@@ -783,6 +763,11 @@ main {
 
   .hero-copy {
     grid-column: 1 / span 5;
+    width: 526px;
+  }
+
+  .hero-copy h1 {
+    font-size: 56px;
     width: 526px;
   }
 
