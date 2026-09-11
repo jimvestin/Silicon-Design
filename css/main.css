@@ -835,17 +835,6 @@ main {
   /* Gökhan FAQ */
 
 
-  @media (max-width: 500px) {
-
-    .call-features {
-        grid-template-columns: 1fr;
-    }
-
-    .phone-container {
-      width: 90%;
-    }
-}
-
 
   .FAQ-Questions {
     
