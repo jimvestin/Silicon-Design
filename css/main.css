@@ -840,39 +840,12 @@ main {
     .call-features {
         grid-template-columns: 1fr;
     }
-}
-
-
-  @media (max-width: 768px) {
 
     .phone-container {
-        grid-template-columns: 1fr;
-        width: 90%;
-        gap: 40px;
-    }
-
-    .the-left-text h2 {
-        width: 100%;
-    }
-
-    .phoner-p {
-        width: 100%;
-    }
-
-    .call-features {
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-    }
-
-    .call-feature {
-        width: 100%;
-    }
-
-    .the-phone img,
-    .the-phones img {
-        width: 35px;
+      width: 90%;
     }
 }
+
 
   .FAQ-Questions {
     
@@ -885,12 +858,11 @@ main {
 .phone-container {
     display: grid;
     grid-template-columns: 400px 700px;
-    width: fit-content;
     gap: 100px;
-    max-width: 1000px;
+    max-width: 1200px;
     width: 90%;
     margin: 0 auto;
-    transform: translateX(-140px);
+    
 }
 
 .the-left-text h2 {
@@ -899,15 +871,14 @@ main {
 
 .phoner-p {
     width: 340px;
-    margin: 40px;
-    margin-left: 1px;
+    margin: 40px 0px;
+    
 }
 
 
 .call-features {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: fit-content;
     gap: 20px;
 }
 
@@ -1003,4 +974,68 @@ main {
 
 .input-radio[type="radio"]:checked + label .circles {
     background-color: #6366F1; 
+}
+
+@media (max-width: 768px) {
+
+    .FAQ-Questions {
+        min-height: auto;
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+
+    .phone-container {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 50px;
+        max-width: 600px;
+    }
+
+    .the-left-text h2 {
+        width: 100%;
+    }
+
+    .phoner-p {
+        width: 100%;
+    }
+
+    .call-features {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .call-feature {
+        width: 100%;
+    }
+
+        .the-right {
+        width: 100%;
+    }
+
+    .the-right-side {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .the-right-side li {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+ 
+}
+
+  @media (max-width: 500px) {
+
+    .call-features {
+        grid-template-columns: 1fr;
+    }
+
+    .phone-container {
+      width: 90%;
+    }
 }
