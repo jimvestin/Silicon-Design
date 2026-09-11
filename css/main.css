@@ -403,14 +403,9 @@ html.dark .logos img:last-child {
   width: 746px;
 }
 
-.features-copy h2 img {
-  display: block;
-  height: 40px;
-  width: auto;
-}
-
-html.dark .features-copy h2 img {
-  filter: invert(1);
+.features-copy h2 {
+  color: var(--ink);
+  font-size: 40px;
 }
 
 .features-copy > .muted {
