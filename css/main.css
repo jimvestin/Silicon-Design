@@ -689,10 +689,14 @@ main {
   }
 
   .hero-copy {
-    grid-column: span 5;
+    grid-column: 1 / span 5;
     width: 100%;
     max-width: none;
     margin-top: 224px;
+  }
+
+  .stores {
+    justify-content: flex-start;
   }
 
   .hero-phones {
