@@ -212,9 +212,9 @@ html.dark .hero {
 .hero-content {
   height: 876px;
   display: grid;
-  grid-template-columns: 550px 746px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
   align-items: flex-start;
-  position: relative;
 }
 
 .hero-copy {
@@ -225,6 +225,8 @@ html.dark .hero {
 
 .hero-copy h1 {
   color: var(--ink);
+  font-size: 56px;
+  width: 526px;
 }
 
 .hero-copy > p {
@@ -267,13 +269,15 @@ html.dark .stores .store-dark {
 /* jim - Hero telefon */
 
 .hero-phones {
-  display: grid;
-  grid-template-columns: 115px 230px 401px;
-  grid-template-rows: 136px 552px;
-  grid-column: 2;
+  grid-column: span 7;
   width: 746px;
-  height: 688px;
   margin-top: 188px;
+}
+
+.hero-phones img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .device {
@@ -301,7 +305,7 @@ html.dark .stores .store-dark {
 }
 
 
-/* jim -Färdig telefonbild där ram + skärm finns i samma bild */
+/* jim - telefonbild där ram + skärm finns i samma bild */
 
 .device.baked {
   overflow: visible;
@@ -383,9 +387,9 @@ html.dark .logos img:last-child {
 /* Jim Vestin - Features */
 
 .app-features {
-  min-height: 1008px;
+  min-height: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 140px;
 }
 
@@ -399,14 +403,9 @@ html.dark .logos img:last-child {
   width: 746px;
 }
 
-.features-copy h2 img {
-  display: block;
-  height: 40px;
-  width: auto;
-}
-
-html.dark .features-copy h2 img {
-  filter: invert(1);
+.features-copy h2 {
+  color: var(--ink);
+  font-size: 40px;
 }
 
 .features-copy > .muted {
@@ -445,7 +444,7 @@ html.dark .features-copy > .muted {
 }
 
 
-/* jim -Färdiga ikoner där bakgrunden finns */
+/* jim - ikoner där bakgrunden finns */
 
 .feature-list > article > img.baked {
   padding: 0;
@@ -484,7 +483,7 @@ html.dark .feature-list p {
 }
 
 
-/* jim - MOBIL FIRST LAYOUT */
+/* jim - MOBIL FIRST */
 
 .container {
   width: auto;
@@ -537,6 +536,11 @@ main {
   margin-top: 0;
 }
 
+.hero-copy h1 {
+  font-size: clamp(32px, 5vw + 12px, 56px);
+  width: 100%;
+}
+
 .hero-copy > p {
   font-size: 16px;
   margin: 16px 0 32px;
@@ -553,25 +557,15 @@ main {
 }
 
 .hero-phones {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-column: auto;
   width: 100%;
-  max-width: 340px;
-  height: auto;
-  aspect-ratio: 402 / 813;
+  max-width: 746px;
   margin: 0 auto;
 }
 
-.tilted {
-  display: none;
-}
-
-.hero-device {
-  grid-column: 1;
-  grid-row: 1;
+.hero-phones img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .logos {
@@ -620,7 +614,9 @@ main {
   flex-shrink: 0;
 }
 
+
 @media (max-width: 400px) {
+
   .stores {
     flex-direction: column;
     align-items: center;
@@ -634,9 +630,12 @@ main {
   .feature-phone {
     width: 85vw;
   }
+
 }
 
+
 @media (min-width: 561px) {
+
   .container {
     max-width: calc(100% - 48px);
   }
@@ -658,9 +657,12 @@ main {
   .logos {
     grid-template-columns: repeat(3, 1fr);
   }
+
 }
 
+
 @media (min-width: 901px) {
+
   .navbar {
     position: relative;
   }
@@ -680,44 +682,29 @@ main {
 
   .hero-content {
     height: 876px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 24px;
     align-items: flex-start;
-    gap: 0;
     text-align: left;
   }
 
   .hero-copy {
-    width: 46%;
-    min-width: 320px;
+    grid-column: 1 / span 5;
+    width: 100%;
     max-width: none;
     margin-top: 224px;
   }
 
+  .stores {
+    justify-content: flex-start;
+  }
+
   .hero-phones {
-    display: grid;
-    grid-template-columns: 115px 230px 401px;
-    grid-template-rows: 136px 552px;
-    width: 52%;
+    grid-column: span 7;
+    width: 100%;
     max-width: none;
-    height: 688px;
-    aspect-ratio: auto;
-    margin: 188px 0 0 2%;
-  }
-
-  .tilted {
-    display: grid;
-    grid-column: 2 / span 2;
-    grid-row: 2;
-    align-self: start;
-  }
-
-  .hero-device {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    align-self: start;
-    width: 402px;
-    height: 813px;
+    margin: 188px 0 0;
   }
 
   .logos {
@@ -733,10 +720,11 @@ main {
 
   .app-features {
     flex-direction: row;
-    align-items: center;
-    min-height: 1008px;
+    align-items: flex-start;
+    min-height: auto;
     padding: 0;
     gap: 60px;
+    margin-top: 112px;
   }
 
   .feature-phone {
@@ -765,9 +753,12 @@ main {
     height: 60px;
     padding: 20px;
   }
+
 }
 
+
 @media (min-width: 1201px) {
+
   .container {
     width: 1296px;
     max-width: calc(100% - 48px);
@@ -784,6 +775,11 @@ main {
     width: 526px;
   }
 
+  .hero-copy h1 {
+    font-size: 56px;
+    width: 526px;
+  }
+
   .hero-phones {
     grid-column: 6 / span 7;
     width: 746px;
@@ -792,17 +788,21 @@ main {
 
   .app-features {
     display: grid;
-    grid-template-columns: repeat(12, 64px);
-    gap: 48px;
+    grid-template-columns: repeat(12, 86px);
+    gap: 24px;
+    align-items: flex-start;
+    min-height: auto;
+    margin-top: 112px;
   }
 
   .feature-phone {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 5;
   }
 
   .features-copy {
-    grid-column: 5 / span 8;
+    grid-column: 6 / span 7;
     width: 746px;
     flex: none;
   }
+
 }
