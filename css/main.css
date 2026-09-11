@@ -305,7 +305,7 @@ html.dark .stores .store-dark {
 }
 
 
-/* jim -Färdig telefonbild där ram + skärm finns i samma bild */
+/* jim -telefonbild där ram + skärm finns i samma bild */
 
 .device.baked {
   overflow: visible;
@@ -387,9 +387,9 @@ html.dark .logos img:last-child {
 /* Jim Vestin - Features */
 
 .app-features {
-  min-height: 1008px;
+  min-height: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 140px;
 }
 
@@ -449,7 +449,7 @@ html.dark .features-copy > .muted {
 }
 
 
-/* jim -Färdiga ikoner där bakgrunden finns */
+/* jim -ikoner där bakgrunden finns */
 
 .feature-list > article > img.baked {
   padding: 0;
@@ -719,10 +719,11 @@ main {
 
   .app-features {
     flex-direction: row;
-    align-items: center;
-    min-height: 1008px;
+    align-items: flex-start;
+    min-height: auto;
     padding: 0;
     gap: 60px;
+    margin-top: 112px;
   }
 
   .feature-phone {
@@ -783,16 +784,19 @@ main {
 
   .app-features {
     display: grid;
-    grid-template-columns: repeat(12, 64px);
-    gap: 48px;
+    grid-template-columns: repeat(12, 86px);
+    gap: 24px;
+    align-items: flex-start;
+    min-height: auto;
+    margin-top: 112px;
   }
 
   .feature-phone {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 5;
   }
 
   .features-copy {
-    grid-column: 5 / span 8;
+    grid-column: 6 / span 7;
     width: 746px;
     flex: none;
   }
