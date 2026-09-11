@@ -8,8 +8,6 @@
   --panel: #ffffff;
   --line: #E7E7F0;
   --brand: #6366f1;
-
-  --section-spacing: 4rem;
 }
 
 html.dark {
@@ -50,7 +48,7 @@ img {
   height: auto;
 }
 
-.container {
+.wrap {
   width: 1296px;
   max-width: calc(100% - 48px);
   margin: auto;
@@ -488,7 +486,7 @@ html.dark .feature-list p {
 
 /* jim - MOBILE FIRST LAYOUT */
 
-.container {
+.wrap {
   width: auto;
   max-width: calc(100% - 32px);
 }
@@ -639,7 +637,7 @@ main {
 }
 
 @media (min-width: 561px) {
-  .container {
+  .wrap {
     max-width: calc(100% - 48px);
   }
 
@@ -696,119 +694,16 @@ main {
     margin-top: 224px;
   }
 
-/* How does it work, Markus */
-
-.howdoes-section {
-  padding-block: var(--section-spacing);
-  margin-top: 2rem;
-  background-color: var(--bg-alt);
-  text-align: center;
-.howdoes{
-  display: flex;
-  justify-content: space-evenly;
-  padding-block: var(--section-spacing);
-}
-.text-how{
-  font-size: 16px;
-  color: var(--muted);
-  max-width: 70ch;
-  margin-inline: auto;
-
-}
-.h4{
-  font-size: 24px;
-  color:var(--ink);
-
-}
-
-@media (width <768px ) {
-  .Pic-how:first-of-type,
-  .Pic-how:last-of-type{
-  display: none;
-    }
+  .hero-phones {
+    display: grid;
+    grid-template-columns: 115px 230px 401px;
+    grid-template-rows: 136px 552px;
+    width: 52%;
+    max-width: none;
+    height: 688px;
+    aspect-ratio: auto;
+    margin: 188px 0 0 2%;
   }
-
-}
-/* How does it work end*/
-
-/* App features, Markus*/
-.makyourmoney{
-  display: grid;
-  height: 100dvh;
-  grid-template-rows: auto 1fr auto;
-  background-color: var(--panel);
-  color: var(--ink);
-  border: 1px solid black;
-}
-.app-money1{
-  display: grid;
-  
-  max-width:25ch;
-  
-  
-  .h2money{
-  display: grid;
-
-  font-size: 32px;
-  }
-.btn-1{
-  display:flex;
-  background-color: #6366F1;
-  align-items: center;
-  justify-content: center;
-  padding: 0.9em;
-  border-radius: 0.375em;
-  max-width: 180px;
-  
-
-  
-
-}
-}
-.app-money2{
-  display: grid;
-  
-  max-width: 25ch;
-  
-  .btn-2{
-  display:flex;
-  background-color: #6366F1;
-  align-items: center;
-  justify-content: center;
-  padding: 0.9em;
-  border-radius: 0.375em;
-  max-width: 180px;
- 
-  
-  }
-  
-}
-li{
-  display:grid;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
- 
-}
-
-.picmoney1{
-  display: grid;
-  
-}
-.picmoney2{
-  display:grid;
- 
-}
-
-
-
-
-
-/* ================================================================
-   JIM VESTIN - RESPONSIVE
-   ================================================================ */
 
   .tilted {
     display: grid;
@@ -873,7 +768,7 @@ li{
 }
 
 @media (min-width: 1201px) {
-  .container {
+  .wrap {
     width: 1296px;
     max-width: calc(100% - 48px);
   }
@@ -910,9 +805,12 @@ li{
     width: 746px;
     flex: none;
   }
+
+
+
+/* Gökhan */
+
 }
-
-
   footer {
    font-size: 14px;
    color: #9397AD; 
@@ -933,6 +831,48 @@ li{
     margin-top: 50px;
 
   }
+
+  /* Gökhan FAQ */
+
+
+  @media (max-width: 500px) {
+
+    .call-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+  @media (max-width: 768px) {
+
+    .phone-container {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 40px;
+    }
+
+    .the-left-text h2 {
+        width: 100%;
+    }
+
+    .phoner-p {
+        width: 100%;
+    }
+
+    .call-features {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .call-feature {
+        width: 100%;
+    }
+
+    .the-phone img,
+    .the-phones img {
+        width: 35px;
+    }
+}
 
   .FAQ-Questions {
     
@@ -1003,4 +943,64 @@ li{
 .the-phone img,
 .the-phones img {
   margin-bottom: 20px;
+}
+
+  .the-right-side li{
+    width: 800px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(61, 61, 61, 0.7);
+    width: 100%;
+    margin: 10px;
+    list-style-type: none;
+}
+
+   .the-right-side label {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 10px;
+     font-size: 17px;
+     cursor: pointer;
+}
+
+
+
+.input-radio[type="radio"] {
+    display: none;
+}
+
+.the-right-side .all-content {
+    padding: 0 10px;
+    line-height: 20px;
+    max-height: 0;
+    transition: max-height 0.5s, padding 0.5s;
+    overflow: hidden;
+    
+}
+
+.input-radio[type="radio"]:checked + label + .all-content {
+    max-height: 300px;
+    padding: 10px 10px 20px;
+}  
+
+.lab-text .circles {
+    display: inline-block;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-color: #e0e6f8;
+    text-align: center;
+    line-height: 30px;
+    align-items: center;
+    transition: transform 0.5s, background-color 0.5s;
+}
+
+.input-radio[type="radio"]:checked + label .circles i {
+    transform: rotate(180deg);
+}
+
+.input-radio[type="radio"]:checked + label .circles {
+    background-color: #6366F1; 
 }
