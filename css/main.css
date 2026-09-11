@@ -48,7 +48,7 @@ img {
   height: auto;
 }
 
-.wrap {
+.container {
   width: 1296px;
   max-width: calc(100% - 48px);
   margin: auto;
@@ -484,9 +484,9 @@ html.dark .feature-list p {
 }
 
 
-/* jim - MOBILE FIRST LAYOUT */
+/* jim - MOBIL FIRST */
 
-.wrap {
+.container {
   width: auto;
   max-width: calc(100% - 32px);
 }
@@ -637,9 +637,10 @@ main {
 }
 
 @media (min-width: 561px) {
-  .wrap {
+  .container {
     max-width: calc(100% - 48px);
   }
+}
 
   .navbar {
     padding: 16px max(24px, calc((100vw - 1296px) / 2));
@@ -658,12 +659,13 @@ main {
   .logos {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+
 
 @media (min-width: 901px) {
   .navbar {
     position: relative;
   }
+
 
   main {
     margin-top: -76px;
@@ -768,10 +770,10 @@ main {
 }
 
 @media (min-width: 1201px) {
-  .wrap {
-    width: 1296px;
-    max-width: calc(100% - 48px);
-  }
+  .container {
+  width: 1296px;
+  max-width: calc(100% - 48px);
+}
 
   .hero-content {
     display: grid;
