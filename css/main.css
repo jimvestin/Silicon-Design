@@ -48,7 +48,7 @@ img {
   height: auto;
 }
 
-.wrap {
+.container {
   width: 1296px;
   max-width: calc(100% - 48px);
   margin: auto;
@@ -486,7 +486,7 @@ html.dark .feature-list p {
 
 /* jim - MOBILE FIRST LAYOUT */
 
-.wrap {
+.container {
   width: auto;
   max-width: calc(100% - 32px);
 }
@@ -637,7 +637,7 @@ main {
 }
 
 @media (min-width: 561px) {
-  .wrap {
+  .container {
     max-width: calc(100% - 48px);
   }
 
@@ -805,12 +805,80 @@ main {
     width: 746px;
     flex: none;
   }
+}
+/*Markus Start*/
+/*How does it work Start*/
+.container {
+   
+    
 
+.howdoes{
+  margin-top: 3rem;
+  display:flex;
+  justify-content: space-evenly;
+  }
+
+.text-how{
+  max-width: 70ch;
+  margin-top: 3rem;
+  margin-inline: auto;
+  }
+
+  .Pic-how:first-of-type,
+  .Pic-how:last-of-type{
+  display: none;
+  }
+
+@media (width > 768px){
+  .Pic-how:first-of-type,
+  .Pic-how:last-of-type{
+    display: block;
+      }
+    }
+}
+/*How does it work End*/
+/*Make your money Start*/
+.makeyourmoney{
+  .container{
+
+  
+  padding: 3rem;
+  display: grid;
+  padding: 4rem 0;
+  gap: 5rem;
+  grid-template-columns: repeat(2, 1fr);
+  
+.moenytext1{
+  display:grid;
+
+  .li{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  }
+}
+.btn-1,.btn-2{
+  display:flex;
+  padding: 1rem 1.75rem;
+  justify-content: center;
+  background-color: #6366F1;
+  align-items: center;
+  text-decoration: none;
+  gap: .5rem;
+  padding: 0.9em;
+  border-radius: 0.5rem;
+  width: 180px;
+}  
+}
+}
+/*Markus End*/
 
 
 /* Gökhan */
 
-}
+
   footer {
    font-size: 14px;
    color: #9397AD; 
@@ -832,6 +900,9 @@ main {
 
   }
 
+
+
+  
   /* Gökhan FAQ */
 
 
