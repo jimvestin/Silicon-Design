@@ -799,36 +799,52 @@ main {
 }
 /*Markus Start*/
 /*How does it work start*/
-.container-how{
-
-.howdoes{
-  padding: 3.5rem;
-  margin-top: 5rem;
+.how{
+  padding-block: 3.335rem;  
   background-color: var(--bg-alt);
   text-align: center;
-    
+  
   .h2{
-    margin-top: 5rem;
-    
-    }
-  
-    .how-pic1,.how-pic2,.how-pic3{
-    display:inline-block;
+    display: flex;
     justify-content: center;
-    padding: 4rem;
-    }
-  
   }
-  
-}
-
- @media (max-width: 768px){
-  .container-how .howdoes .how-pic1,
-  .container-how .howdoes .how-pic3{
-  display:none;
+  .pictures{
+    display: flex;
+    justify-content: space-evenly;
+    padding-block: 3.335rem;
+  }
+  .how-pic:first-of-type,
+  .how-pic:last-of-type{
+    display: none;
+  }
+  @media (min-width: 768px){
+    .how-pic:first-of-type,
+    .how-pic:last-of-type{
+      display: block;
+    }
   }
 }
 /*How does it work end*/
+
+
+  
+
+
+
+.btn-1,.btn-2{
+  display:flex;
+  background-color: #6366F1;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9em;
+  border-radius: 0.375em;
+  max-width: 180px;
+  }
+
+  .receive{
+    width: auto;
+  }
+
 
 /*Markus End*/
 
