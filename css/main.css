@@ -1,4 +1,4 @@
-/* Jim Vestin */
+
 
 :root {
   --bg: #ffffff;
@@ -212,9 +212,9 @@ html.dark .hero {
 .hero-content {
   height: 876px;
   display: grid;
-  grid-template-columns: 550px 746px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
   align-items: flex-start;
-  position: relative;
 }
 
 .hero-copy {
@@ -225,6 +225,8 @@ html.dark .hero {
 
 .hero-copy h1 {
   color: var(--ink);
+  font-size: 56px;
+  width: 526px;
 }
 
 .hero-copy > p {
@@ -267,13 +269,15 @@ html.dark .stores .store-dark {
 /* jim - Hero telefon */
 
 .hero-phones {
-  display: grid;
-  grid-template-columns: 115px 230px 401px;
-  grid-template-rows: 136px 552px;
-  grid-column: 2;
+  grid-column: span 7;
   width: 746px;
-  height: 688px;
   margin-top: 188px;
+}
+
+.hero-phones img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .device {
@@ -301,7 +305,7 @@ html.dark .stores .store-dark {
 }
 
 
-/* jim -Färdig telefonbild där ram + skärm finns i samma bild */
+/* jim -telefonbild där ram + skärm finns i samma bild */
 
 .device.baked {
   overflow: visible;
@@ -383,9 +387,9 @@ html.dark .logos img:last-child {
 /* Jim Vestin - Features */
 
 .app-features {
-  min-height: 1008px;
+  min-height: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 140px;
 }
 
@@ -399,14 +403,9 @@ html.dark .logos img:last-child {
   width: 746px;
 }
 
-.features-copy h2 img {
-  display: block;
-  height: 40px;
-  width: auto;
-}
-
-html.dark .features-copy h2 img {
-  filter: invert(1);
+.features-copy h2 {
+  color: var(--ink);
+  font-size: 40px;
 }
 
 .features-copy > .muted {
@@ -445,7 +444,7 @@ html.dark .features-copy > .muted {
 }
 
 
-/* jim -Färdiga ikoner där bakgrunden finns */
+/* jim -ikoner där bakgrunden finns */
 
 .feature-list > article > img.baked {
   padding: 0;
@@ -484,7 +483,7 @@ html.dark .feature-list p {
 }
 
 
-/* jim - MOBILE FIRST LAYOUT */
+/* jim - MOBIL FIRST */
 
 .container {
   width: auto;
@@ -537,6 +536,11 @@ main {
   margin-top: 0;
 }
 
+.hero-copy h1 {
+  font-size: clamp(32px, 5vw + 12px, 56px);
+  width: 100%;
+}
+
 .hero-copy > p {
   font-size: 16px;
   margin: 16px 0 32px;
@@ -553,25 +557,15 @@ main {
 }
 
 .hero-phones {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-column: auto;
   width: 100%;
-  max-width: 340px;
-  height: auto;
-  aspect-ratio: 402 / 813;
+  max-width: 746px;
   margin: 0 auto;
 }
 
-.tilted {
-  display: none;
-}
-
-.hero-device {
-  grid-column: 1;
-  grid-row: 1;
+.hero-phones img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .logos {
@@ -640,6 +634,7 @@ main {
   .container {
     max-width: calc(100% - 48px);
   }
+}
 
   .navbar {
     padding: 16px max(24px, calc((100vw - 1296px) / 2));
@@ -658,12 +653,13 @@ main {
   .logos {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+
 
 @media (min-width: 901px) {
   .navbar {
     position: relative;
   }
+
 
   main {
     margin-top: -76px;
@@ -680,44 +676,29 @@ main {
 
   .hero-content {
     height: 876px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 24px;
     align-items: flex-start;
-    gap: 0;
     text-align: left;
   }
 
   .hero-copy {
-    width: 46%;
-    min-width: 320px;
+    grid-column: 1 / span 5;
+    width: 100%;
     max-width: none;
     margin-top: 224px;
   }
 
+  .stores {
+    justify-content: flex-start;
+  }
+
   .hero-phones {
-    display: grid;
-    grid-template-columns: 115px 230px 401px;
-    grid-template-rows: 136px 552px;
-    width: 52%;
+    grid-column: span 7;
+    width: 100%;
     max-width: none;
-    height: 688px;
-    aspect-ratio: auto;
-    margin: 188px 0 0 2%;
-  }
-
-  .tilted {
-    display: grid;
-    grid-column: 2 / span 2;
-    grid-row: 2;
-    align-self: start;
-  }
-
-  .hero-device {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    align-self: start;
-    width: 402px;
-    height: 813px;
+    margin: 188px 0 0;
   }
 
   .logos {
@@ -733,10 +714,11 @@ main {
 
   .app-features {
     flex-direction: row;
-    align-items: center;
-    min-height: 1008px;
+    align-items: flex-start;
+    min-height: auto;
     padding: 0;
     gap: 60px;
+    margin-top: 112px;
   }
 
   .feature-phone {
@@ -768,10 +750,10 @@ main {
 }
 
 @media (min-width: 1201px) {
-  .wrap {
-    width: 1296px;
-    max-width: calc(100% - 48px);
-  }
+  .container {
+  width: 1296px;
+  max-width: calc(100% - 48px);
+}
 
   .hero-content {
     display: grid;
@@ -784,6 +766,11 @@ main {
     width: 526px;
   }
 
+  .hero-copy h1 {
+    font-size: 56px;
+    width: 526px;
+  }
+
   .hero-phones {
     grid-column: 6 / span 7;
     width: 746px;
@@ -792,89 +779,58 @@ main {
 
   .app-features {
     display: grid;
-    grid-template-columns: repeat(12, 64px);
-    gap: 48px;
+    grid-template-columns: repeat(12, 86px);
+    gap: 24px;
+    align-items: flex-start;
+    min-height: auto;
+    margin-top: 112px;
   }
 
   .feature-phone {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 5;
   }
 
   .features-copy {
-    grid-column: 5 / span 8;
+    grid-column: 6 / span 7;
     width: 746px;
     flex: none;
   }
+
 }
 /*Markus Start*/
-/*How does it work Start*/
-.container {
-   
-    
+/*How does it work start*/
+.container-how{
 
 .howdoes{
-  margin-top: 3rem;
-  display:flex;
-  justify-content: space-evenly;
-  }
-
-.text-how{
-  max-width: 70ch;
-  margin-top: 3rem;
-  margin-inline: auto;
-  }
-
-  .Pic-how:first-of-type,
-  .Pic-how:last-of-type{
-  display: none;
-  }
-
-@media (width > 768px){
-  .Pic-how:first-of-type,
-  .Pic-how:last-of-type{
-    display: block;
-      }
+  padding: 3.5rem;
+  margin-top: 5rem;
+  background-color: var(--bg-alt);
+  text-align: center;
+    
+  .h2{
+    margin-top: 5rem;
+    
     }
+  
+    .how-pic1,.how-pic2,.how-pic3{
+    display:inline-block;
+    justify-content: center;
+    padding: 4rem;
+    }
+  
+  }
+  
 }
-/*How does it work End*/
-/*Make your money Start*/
-.makeyourmoney{
-  .container{
 
-  
-  padding: 3rem;
-  display: grid;
-  padding: 4rem 0;
-  gap: 5rem;
-  grid-template-columns: repeat(2, 1fr);
-  
-.moenytext1{
-  display:grid;
-
-  .li{
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
+ @media (max-width: 768px){
+  .container-how .howdoes .how-pic1,
+  .container-how .howdoes .how-pic3{
+  display:none;
   }
 }
-.btn-1,.btn-2{
-  display:flex;
-  padding: 1rem 1.75rem;
-  justify-content: center;
-  background-color: #6366F1;
-  align-items: center;
-  text-decoration: none;
-  gap: .5rem;
-  padding: 0.9em;
-  border-radius: 0.5rem;
-  width: 180px;
-}  
-}
-}
-/*Markus End*/
+/*How does it work end*/
 
+/*Markus End*/
 
 /* Gökhan */
 
@@ -900,50 +856,9 @@ main {
 
   }
 
-
-
-  
   /* Gökhan FAQ */
 
 
-  @media (max-width: 500px) {
-
-    .call-features {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-  @media (max-width: 768px) {
-
-    .phone-container {
-        grid-template-columns: 1fr;
-        width: 90%;
-        gap: 40px;
-    }
-
-    .the-left-text h2 {
-        width: 100%;
-    }
-
-    .phoner-p {
-        width: 100%;
-    }
-
-    .call-features {
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-    }
-
-    .call-feature {
-        width: 100%;
-    }
-
-    .the-phone img,
-    .the-phones img {
-        width: 35px;
-    }
-}
 
   .FAQ-Questions {
     
@@ -956,12 +871,11 @@ main {
 .phone-container {
     display: grid;
     grid-template-columns: 400px 700px;
-    width: fit-content;
     gap: 100px;
-    max-width: 1000px;
+    max-width: 1200px;
     width: 90%;
     margin: 0 auto;
-    transform: translateX(-140px);
+    
 }
 
 .the-left-text h2 {
@@ -970,15 +884,14 @@ main {
 
 .phoner-p {
     width: 340px;
-    margin: 40px;
-    margin-left: 1px;
+    margin: 40px 0px;
+    
 }
 
 
 .call-features {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: fit-content;
     gap: 20px;
 }
 
@@ -1074,4 +987,68 @@ main {
 
 .input-radio[type="radio"]:checked + label .circles {
     background-color: #6366F1; 
+}
+
+@media (max-width: 768px) {
+
+    .FAQ-Questions {
+        min-height: auto;
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+
+    .phone-container {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 50px;
+        max-width: 600px;
+    }
+
+    .the-left-text h2 {
+        width: 100%;
+    }
+
+    .phoner-p {
+        width: 100%;
+    }
+
+    .call-features {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .call-feature {
+        width: 100%;
+    }
+
+        .the-right {
+        width: 100%;
+    }
+
+    .the-right-side {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .the-right-side li {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+ 
+}
+
+  @media (max-width: 500px) {
+
+    .call-features {
+        grid-template-columns: 1fr;
+    }
+
+    .phone-container {
+      width: 90%;
+    }
 }

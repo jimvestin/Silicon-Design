@@ -10,7 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,260 +24,279 @@
   </head>
 
   <body>
-    <!-- =====================================================
-       JIM VESTIN - HEADER / NAVIGATION
-       ===================================================== -->
+<!-- Jim Vestin - Sidhuvud -->
 
-    <header class="navbar">
-      <a class="logo" href="#top">
-        <img class="logo-light" src="assets/logo.svg" alt="Silicon" />
+<header class="navbar">
+  <a class="logo" href="#top">
+    <img class="logo-light" src="assets/logo.svg" alt="Silicon" />
+    <img class="logo-dark" src="assets/logo-dark.svg" alt="Silicon" />
+  </a>
 
-        <img class="logo-dark" src="assets/logo-dark.svg" alt="Silicon" />
-      </a>
+  <div class="nav-actions">
+    <span>Dark Mode</span>
 
-      <div class="nav-actions">
-        <span>Dark Mode</span>
+    <span class="theme-toggle" aria-hidden="true">
+      <i></i>
+    </span>
 
-        <span class="theme-toggle" aria-hidden="true">
-          <i></i>
-        </span>
+    <a class="sign-in" href="#faq">
+      <img src="assets/btn.png" alt="Sign in / up" />
+    </a>
+  </div>
+</header>
 
-        <a class="sign-in" href="#faq">
-          <img src="assets/btn.png" alt="Sign in / up" />
-        </a>
+<main id="top">
+
+  <!-- Jim Vestin - Hero -->
+
+  <section class="hero">
+    <div class="container grid-12 hero-content">
+
+      <div class="hero-copy">
+        <h1>Manage All Your Money in One App</h1>
+
+        <p>
+          We offer you a new generation of the mobile banking.<br />
+          Save, spend &amp; manage money in your pocket.
+        </p>
+
+        <!-- jim apple/google -->
+
+        <div class="stores">
+
+          <a href="#download">
+            <img
+              class="store-light"
+              src="assets/appstore.svg"
+              alt="Download on the App Store"
+            />
+            <img
+              class="store-dark"
+              src="assets/appstore-dark.svg"
+              alt="Download on the App Store"
+            />
+          </a>
+
+          <a href="#download">
+            <img
+              class="store-light"
+              src="assets/googleplay.svg"
+              alt="Get it on Google Play"
+            />
+            <img
+              class="store-dark"
+              src="assets/googleplay-dark.svg"
+              alt="Get it on Google Play"
+            />
+          </a>
+
+        </div>
       </div>
-    </header>
 
-    <main id="top">
-      <!-- =====================================================
-         JIM VESTIN - HERO
-         ===================================================== -->
+      <div class="hero-phones">
+        <img
+          src="assets/Nymobil.png"
+          alt="Silicon banking app dashboard"
+        />
+      </div>
 
-      <section class="hero">
-        <div class="wrap hero-content">
-          <div class="hero-copy">
-            <h1>Manage All Your Money in One App</h1>
+    </div>
+  </section>
 
+
+  <!-- Jim Vestin - Logotyper -->
+
+  <section
+    class="logos container"
+    aria-label="Partner companies"
+  >
+
+    <img src="assets/logo-1.svg" alt="Partner logo" />
+    <img src="assets/logo-2.svg" alt="Partner logo" />
+    <img src="assets/logo-3.svg" alt="Partner logo" />
+    <img src="assets/logo-4.svg" alt="Partner logo" />
+    <img src="assets/logo-5.svg" alt="Partner logo" />
+    <img src="assets/logo-6.svg" alt="Partner logo" />
+
+  </section>
+
+
+  <!-- Jim Vestin - Funktioner -->
+
+  <section class="app-features container grid-12">
+
+    <div class="feature-phone device baked">
+      <img
+        src="assets/feature-device.png"
+        alt="Mobile payment screen"
+      />
+    </div>
+
+    <div class="features-copy">
+
+      <h2>App Features</h2>
+
+      <p class="muted">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Proin volutpat mollis egestas. Nam luctus facilisis ultrices.
+        Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.
+      </p>
+
+      <div class="feature-list">
+
+        <article>
+          <img src="assets/icon-card.svg" alt="" />
+
+          <div>
+            <h3>Easy Payments</h3>
             <p>
-              We offer you a new generation of the mobile banking.<br />
-              Save, spend &amp; manage money in your pocket.
+              Id mollis consectetur congue egestas egestas
+              suspendisse blandit justo.
             </p>
-
-            <!-- App Store / Google Play -->
-            <div class="stores">
-              <a href="#download">
-                <img
-                  src="assets/appstore.svg"
-                  alt="Download on the App Store"
-                />
-              </a>
-
-              <a href="#download">
-                <img src="assets/googleplay.svg" alt="Get it on Google Play" />
-              </a>
-            </div>
           </div>
+        </article>
 
-          <div class="hero-phones">
-            <div class="device tilted baked">
-              <img
-                src="assets/hero-tilted-device.png"
-                alt="My budget overview"
-              />
-            </div>
+        <article>
+          <img src="assets/icon-shield.svg" alt="" />
 
-            <div class="device hero-device">
-              <img
-                src="assets/hero-front-screen.png"
-                alt="Silicon banking app dashboard"
-              />
-
-              <img class="frame" src="assets/hero-phone.png" alt="" />
-            </div>
+          <div>
+            <h3>Data Security</h3>
+            <p>
+              Augue pulvinar justo, fermentum fames aliquam
+              accumsan vestibulum non.
+            </p>
           </div>
-        </div>
-      </section>
+        </article>
 
-      <!-- =====================================================
-         JIM VESTIN - PARTNER / BRAND LOGOS
-         ===================================================== -->
+        <article>
+          <img
+            src="assets/icon-cost.png"
+            class="baked"
+            alt=""
+          />
 
-      <section class="logos wrap" aria-label="Partner companies">
-        <img src="assets/logo-1.svg" alt="Partner logo" />
-
-        <img src="assets/logo-2.svg" alt="Partner logo" />
-
-        <img src="assets/logo-3.svg" alt="Partner logo" />
-
-        <img src="assets/logo-4.svg" alt="Partner logo" />
-
-        <img src="assets/logo-5.svg" alt="Partner logo" />
-
-        <img src="assets/logo-6.svg" alt="Partner logo" />
-      </section>
-
-      <!-- =====================================================
-         JIM VESTIN - APP FEATURES
-         ===================================================== -->
-
-      <section class="app-features wrap">
-        <div class="feature-phone device baked">
-          <img src="assets/feature-device.png" alt="Mobile payment screen" />
-        </div>
-
-        <div class="features-copy">
-          <h2>
-            <img src="assets/app-features-title.png" alt="App Features" />
-          </h2>
-
-          <p class="muted">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-            volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque
-            volutpat ligula est. Mattis fermentum, at nec lacus.
-          </p>
-
-          <div class="feature-list">
-            <article>
-              <img src="assets/icon-card.svg" alt="" />
-
-              <div>
-                <h3>Easy Payments</h3>
-
-                <p>
-                  Id mollis consectetur congue egestas egestas suspendisse
-                  blandit justo.
-                </p>
-              </div>
-            </article>
-
-            <article>
-              <img src="assets/icon-shield.svg" alt="" />
-
-              <div>
-                <h3>Data Security</h3>
-
-                <p>
-                  Augue pulvinar justo, fermentum fames aliquam accumsan
-                  vestibulum non.
-                </p>
-              </div>
-            </article>
-
-            <article>
-              <img src="assets/icon-cost.png" class="baked" alt="" />
-
-              <div>
-                <h3>Cost Statistics</h3>
-
-                <p>
-                  Mattis urna ultricies non amet, purus in auctor non. Odio
-                  vulputate ac nibh.
-                </p>
-              </div>
-            </article>
-
-            <article>
-              <img src="assets/icon-support.png" class="baked" alt="" />
-
-              <div>
-                <h3>Support 24/7</h3>
-
-                <p>
-                  Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus
-                  id. Sit facilisis dolor arcu.
-                </p>
-              </div>
-            </article>
-
-            <article>
-              <img src="assets/icon-cashback.png" class="baked" alt="" />
-
-              <div>
-                <h3>Regular Cashback</h3>
-
-                <p>
-                  Sit facilisis dolor arcu, fermentum vestibulum arcu elementum
-                  imperdiet eleifend.
-                </p>
-              </div>
-            </article>
-
-            <article>
-              <img src="assets/icon-top-standards.png" class="baked" alt="" />
-
-              <div>
-                <h3>Top Standards</h3>
-
-                <p>
-                  Nunc senectus leo vel venenatis accumsan vestibulum
-                  sollicitudin amet.
-                </p>
-              </div>
-            </article>
+          <div>
+            <h3>Cost Statistics</h3>
+            <p>
+              Mattis urna ultricies non amet, purus in auctor non.
+              Odio vulputate ac nibh.
+            </p>
           </div>
-        </div>
-      </section>
+        </article>
 
-        <!--MARKUS HOW DOES -->
+        <article>
+          <img
+            src="assets/icon-support.png"
+            class="baked"
+            alt=""
+          />
 
-      <section class="howdoes-section">
-        <div class="container">
-          <h2> How Does It Work?</h2>
+          <div>
+            <h3>Support 24/7</h3>
+            <p>
+              Faucibus cursus maecenas lorem cursus nibh.
+              Sociis sit risus id. Sit facilisis dolor arcu.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <img
+            src="assets/icon-cashback.png"
+            class="baked"
+            alt=""
+          />
+
+          <div>
+            <h3>Regular Cashback</h3>
+            <p>
+              Sit facilisis dolor arcu, fermentum vestibulum arcu
+              elementum imperdiet eleifend.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <img
+            src="assets/icon-top-standards.png"
+            class="baked"
+            alt=""
+          />
+
+          <div>
+            <h3>Top Standards</h3>
+            <p>
+              Nunc senectus leo vel venenatis accumsan vestibulum
+              sollicitudin amet.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+  </section>
+    <!--MARKUS HOW DOES -->
+
+      
+        <div class="container-how">       
             <div class="howdoes">
-              <div class="Pic-how">
+              <h2 class="h2"> How Does It Work?</h2>
+              <div class="how-pic1">
                 <img src="assets/iPhone 12 Pro How left.svg" alt="App Showcase left">
                   </div>
-                  <div class="Pic-how">
+                  <div class="how-pic2">
                 <img src="assets/iPhone 12 Pro How middle.svg" alt="App Showcase middle">
               </div>
-             <div class="Pic-how">
+             <div class="how-pic3">
             <img src="assets/iPhone 12 Pro How right.svg" alt="App Showcase right">
           </div>
         
 
         <div class="text-how">
           <h3 class="h4">Latest transaction history</h3>
-          <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum. </p>
+          <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed.<br> Arcu sociis tristique quisque hac in consectetur condimentum. </p>
         </div>
-      </section>
+      
       </div>
       <!---MARKUS MAKE YOUR MONEY-->
-
       <section class="makeyourmoney">
-        <div class="container">
+        <div class="container money">
           <h2 class="h2money">Make your money<br>transfer simple and clear</h2>
             <ul>
-              <li><img src="assets/bx-check-circle.svg" alt="Checkbox"> Banking transaction are free for you</li>
-                <li><img src="assets/bx-check-circle.svg" alt="Checkbox"> No monthly cash commission</li>
-                  <li><img src="assets/bx-check-circle.svg" alt="Checkbox"> Manage payments and transactions online</li>
-                </ul>
-             <a href="#" class="btn-1">
-            <span>Learn more</span>
-          <img src="assets/arrow right.svg" alt="Small arrow right"></a>
-               
-           
-                  <div class="moneypic2">
-                      <img src="assets/inner-1.png" alt="App Showcase">
-                        <img class="moneypicoverlap" src="assets/inner.png" alt="App Showcase">
-                          </div>
-                            <div class="moneypic1">
-                              <img  src="assets/benefit-contacts-card.png" alt="App Showcase">
-                                </div>                         
-                                <div class="moneytext2">
-                              <h2 class="h2money">Receive payments from internation bank details</h2>
-                            <img src="assets/credit-card-small.svg" alt="Small creditcard">
-                          <p class="money">Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
-                        <img src="assets/wallet.svg" alt="Small wallet">
-                      <p class="money">A elementur and imperdiet enim, peretium etiam facilisi aenean quam mauris.</p>
+              <li><img src="assets/bx-check-circle.svg" alt=""> Banking transaction are free for you</li>
+                <li><img src="assets/bx-check-circle.svg" alt=""> No monthly cash commission</li>
+                <li><img src="assets/bx-check-circle.svg" alt=""> Manage payments and transactions online</li>
+              </ul>
+            <section> 
+            
+            <a href="#" class="btn-1">
+              <span>Learn more</span>
+            <img src="assets/arrow right.svg" alt="">
+            </a>
+        
+          <div class="picmoney1">
+            <img  src="assets/benefit-contacts-card.png" alt="">
+              </div>
+                <div class="picmoney2">
+                  <img src="assets/inner-1.png" alt="">
+                    <img src="assets/inner.png" alt="">
+                      </div>
+                        <div class="app-money2">
+                          <h2 class="h2money">Receive payments from internation bank details</h2>
+                        <img src="assets/credit-card-small.svg" alt="">
+                      <p class="money">Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
+                    <img src="assets/wallet.svg" alt="">
+                  <p class="money">A elementur and imperdiet enim, peretium etiam facilisi aenean quam mauris.</p>
+                <section> <a href="#" class="btn-2">
+              <span class="">Learn more</span>
+            <img src="assets/arrow right.svg" alt=""></a>
+          </section>
+        </div>
+      </section>
 
-                  <a href="#" class="btn-2">
-                <span>Learn more</span>
-              <img src="assets/arrow right.svg" alt="Small arrow right"></a>            
-          </div>
-        </section>
-              <!--MARKUS END-->
                <!--Gökhan Faq and Questions-->
-      <section class="FAQ-Questions">
+    <section class="FAQ-Questions">
             <div class="phone-container">
                 <div class="the-left-text">
                     <h2>Any questions?Check out the FAQs</h2>
@@ -380,5 +399,6 @@
     </Div>
 </footer>
     <script src="main.js"></script>
+    <script src="Accordion.js"></script>
   </body>
 </html>
