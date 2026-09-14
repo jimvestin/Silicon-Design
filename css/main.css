@@ -48,7 +48,7 @@ img {
   height: auto;
 }
 
-.container {
+.wrap {
   width: 1296px;
   max-width: calc(100% - 48px);
   margin: auto;
@@ -485,7 +485,7 @@ html.dark .feature-list p {
 
 /* jim - MOBIL FIRST */
 
-.container {
+.wrap {
   width: auto;
   max-width: calc(100% - 32px);
 }
@@ -631,7 +631,7 @@ main {
 }
 
 @media (min-width: 561px) {
-  .container {
+  .wrap {
     max-width: calc(100% - 48px);
   }
 }
@@ -690,6 +690,7 @@ main {
     margin-top: 224px;
   }
 
+<<<<<<< HEAD
   .stores {
     justify-content: flex-start;
   }
@@ -699,6 +700,32 @@ main {
     width: 100%;
     max-width: none;
     margin: 188px 0 0;
+=======
+  .hero-phones {
+    display: grid;
+    grid-template-columns: 115px 230px 401px;
+    grid-template-rows: 136px 552px;
+    width: 52%;
+    max-width: none;
+    height: 688px;
+    aspect-ratio: auto;
+    margin: 188px 0 0 2%;
+  }
+
+  .tilted {
+    display: grid;
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  .hero-device {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: start;
+    width: 402px;
+    height: 813px;
+>>>>>>> Faq
   }
 
   .logos {
@@ -750,10 +777,17 @@ main {
 }
 
 @media (min-width: 1201px) {
+<<<<<<< HEAD
   .container {
   width: 1296px;
   max-width: calc(100% - 48px);
 }
+=======
+  .wrap {
+    width: 1296px;
+    max-width: calc(100% - 48px);
+  }
+>>>>>>> Faq
 
   .hero-content {
     display: grid;
@@ -795,6 +829,7 @@ main {
     width: 746px;
     flex: none;
   }
+<<<<<<< HEAD
 
 
 /* Alex testimonials */
@@ -874,6 +909,28 @@ height: 48px;
         display: none;
     }
 }
+=======
+<<<<<<< Updated upstream
+=======
+}
+
+/* Alex testimonials */
+
+.testimonials{
+min-height: 542px;
+padding: 95px 0;
+background-color: #F3F6FF;
+display: grid;
+grid-template-columns: repeat(12, 86px);
+column-gap: 24px;
+justify-content: center;
+>>>>>>> Stashed changes
+}
+
+
+/* Gökhan */
+
+>>>>>>> Faq
 
   footer {
    font-size: 14px;
@@ -899,6 +956,20 @@ height: 48px;
   /* Gökhan FAQ */
 
 
+<<<<<<< HEAD
+=======
+  @media (max-width: 500px) {
+
+    .call-features {
+        grid-template-columns: 1fr;
+    }
+
+    .phone-container {
+      width: 90%;
+    }
+}
+
+>>>>>>> Faq
 
   .FAQ-Questions {
     
@@ -923,8 +994,14 @@ height: 48px;
 }
 
 .phoner-p {
+<<<<<<< HEAD
     width: 340px;
     margin: 40px 0px;
+=======
+    width: 360px;
+    margin: 40px 0px;
+    color: #565973;
+>>>>>>> Faq
     
 }
 
@@ -933,6 +1010,14 @@ height: 48px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+.call-feature {
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #d7d7df;
+  border-width: 1px;
+  padding: 14px;
 }
 
  .phones-green {
@@ -946,6 +1031,7 @@ height: 48px;
 
   .phone-p {
     margin-bottom: 20px;
+    color: #565973;
   }
 
   .phone-purple {
@@ -1004,6 +1090,13 @@ height: 48px;
     
 }
 
+<<<<<<< HEAD
+=======
+.all-content {
+  color: #565973;
+}
+
+>>>>>>> Faq
 .input-radio[type="radio"]:checked + label + .all-content {
     max-height: 300px;
     padding: 10px 10px 20px;
@@ -1029,6 +1122,20 @@ height: 48px;
     background-color: #6366F1; 
 }
 
+<<<<<<< HEAD
+=======
+
+@media (max-width:1100px) {
+.phone-container {
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 90%;
+  max-width: 1000px;
+  }
+}
+
+
+>>>>>>> Faq
 @media (max-width: 768px) {
 
     .FAQ-Questions {
@@ -1048,22 +1155,46 @@ height: 48px;
 
     .the-left-text h2 {
         width: 100%;
+<<<<<<< HEAD
+=======
+        text-align: center;
+>>>>>>> Faq
     }
 
     .phoner-p {
         width: 100%;
+<<<<<<< HEAD
     }
 
+=======
+        text-align: center;
+    }
+
+
+>>>>>>> Faq
     .call-features {
         grid-template-columns: 1fr 1fr;
         width: 100%;
     }
+<<<<<<< HEAD
 
     .call-feature {
         width: 100%;
     }
 
         .the-right {
+=======
+    
+
+    .call-feature {
+        width: 100%;
+        
+        
+    }
+    
+
+    .the-right {
+>>>>>>> Faq
         width: 100%;
     }
 
@@ -1091,4 +1222,21 @@ height: 48px;
     .phone-container {
       width: 90%;
     }
+<<<<<<< HEAD
+=======
+
+    .call-feature {
+      display: none;
+    }
+
+    .the-left-text h2 {
+      text-align: center;
+      width: 100%;
+    }
+
+    .phoner-p {
+      text-align: center;
+      width: 100%;
+    }
+>>>>>>> Faq
 }
