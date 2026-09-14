@@ -797,10 +797,84 @@ main {
   }
 
 
+/* Alex testimonials */
 
-/* Gökhan */
-
+.testimonials{
+min-height: 542px;
+padding: 95px 0;
+background-color: #F3F6FF;
+display: grid;
+grid-template-columns: repeat(12, 86px);
+column-gap: 24px;
+justify-content: center;
 }
+
+.h2-testimonials {
+grid-column: 1/ 4;
+}
+
+.testimonial-cards {
+display: contents;
+}
+
+.testimonial-card:first-child{
+grid-column: 5/ 9;
+height: 350px;
+padding: 24px;
+background-color: #FFFFFF;
+border-radius: 8px;
+box-sizing: border-box;
+}
+
+.testimonial-card:last-child{
+grid-column: 9/ 13;
+height: 350px;
+padding: 24px;
+background-color: #FFFFFF;
+border-radius: 8px;
+box-sizing: border-box;
+}
+
+.stars {
+font-size: 20px;
+margin-top: 24px;
+margin-bottom: 24px;
+color: #FFBA08;
+}
+
+.testimonial-text{
+font-family: "Manrope", sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 160%;
+letter-spacing: 0;
+color: #565973;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.testimonial-author img{
+width: 48px;
+height: 48px;
+}
+
+.author-info{
+  display:flex;
+  flex-direction: column;
+}
+
+/* Dölj Testimonials på tablet och mobil */
+@media (max-width: 1023px) {
+    .testimonials {
+        display: none;
+    }
+}
+
   footer {
    font-size: 14px;
    color: #9397AD; 
