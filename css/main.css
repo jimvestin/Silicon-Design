@@ -796,7 +796,7 @@ main {
     flex: none;
   }
 
-
+}
 /* Alex testimonials */
 
 .testimonials{
@@ -923,8 +923,9 @@ height: 48px;
 }
 
 .phoner-p {
-    width: 340px;
+    width: 360px;
     margin: 40px 0px;
+    color: #565973;
     
 }
 
@@ -933,6 +934,14 @@ height: 48px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+.call-feature {
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #d7d7df;
+  border-width: 1px;
+  padding: 14px;
 }
 
  .phones-green {
@@ -946,6 +955,7 @@ height: 48px;
 
   .phone-p {
     margin-bottom: 20px;
+    color: #565973;
   }
 
   .phone-purple {
@@ -1029,6 +1039,18 @@ height: 48px;
     background-color: #6366F1; 
 }
 
+
+
+
+@media (max-width:1100px) {
+.phone-container {
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 90%;
+  max-width: 1000px;
+  }
+}
+
 @media (max-width: 768px) {
 
     .FAQ-Questions {
@@ -1048,10 +1070,12 @@ height: 48px;
 
     .the-left-text h2 {
         width: 100%;
+        text-align: center;
     }
 
     .phoner-p {
         width: 100%;
+        text-align: center;
     }
 
     .call-features {
@@ -1083,6 +1107,10 @@ height: 48px;
 }
 
   @media (max-width: 500px) {
+
+    .call-feature {
+      display: none;
+    }
 
     .call-features {
         grid-template-columns: 1fr;
