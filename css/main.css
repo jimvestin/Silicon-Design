@@ -974,7 +974,6 @@ main {
 
 .input-radio[type="radio"]:checked + label .circles {
     background-color: #6366F1; 
-<<<<<<< Updated upstream
 }
 
 @media (max-width: 768px) {
@@ -1039,6 +1038,4 @@ main {
     .phone-container {
       width: 90%;
     }
-=======
->>>>>>> Stashed changes
 }
