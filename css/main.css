@@ -1056,6 +1056,9 @@ height: 48px;
   display: none;
 }
 
+.the-left-text-tablet {
+  display: none;
+}
 
 
 @media (max-width:1100px) {
@@ -1119,12 +1122,33 @@ height: 48px;
         margin: 10px 0;
     }
 
+    .the-left-text-tablet {
+      display: contents;
+    }
+
+
+    .call-feature-tablet {
+      border-radius: 8px;
+      border-style: solid;
+      border-color: #d7d7df;
+      border-width: 1px;
+      padding: 14px;
+}
+
+    .call-feature {
+      display: none;
+    }
+
  
 }
 
   @media (max-width: 500px) {
 
     .call-feature {
+      display: none;
+    }
+
+    .call-feature-tablet {
       display: none;
     }
 
@@ -1155,7 +1179,9 @@ height: 48px;
     }
 
     .button-contact {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-color: #6366F1;
       border-radius: 6px;
       background-color: #6366F1;
