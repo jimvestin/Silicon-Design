@@ -939,7 +939,7 @@ height: 48px;
 .call-feature {
   border-radius: 8px;
   border-style: solid;
-  border-color: #d7d7df;
+  border-color: #dfd7d7;
   border-width: 1px;
   padding: 14px;
 }
@@ -1025,6 +1025,10 @@ height: 48px;
 .lab-text {
   font-weight: 700;
   
+}
+
+.circles i {
+  color: #0B0F19;
 }
 
 .lab-text .circles {
