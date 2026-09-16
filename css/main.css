@@ -797,7 +797,7 @@ main {
   }
 
 
-/* Alex testimonials */
+/* Alex testimonials light-mode */
 
 .testimonials{
 min-height: 542px;
@@ -866,6 +866,24 @@ height: 48px;
 .author-info{
   display:flex;
   flex-direction: column;
+}
+
+/* Alex testimonials - Dark mode */
+
+html.dark .testimonials {
+    background-color: #151822;
+}
+
+html.dark .h2-testimonials {
+    color: #FFFFFF;
+}
+
+html.dark .testimonial-card {
+    background-color: #1E212B;
+}
+
+html.dark .testimonial-text {
+    color: #BBBCBF;
 }
 
 /* Dölj Testimonials på tablet och mobil */
