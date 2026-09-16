@@ -886,6 +886,17 @@ html.dark .testimonial-text {
     color: #BBBCBF;
 }
 
+
+/* Gör testimonials responsiv när storleken minskar */
+@media (max-width:1100px) {
+.testimonials{
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  width: 90%;
+  max-width: 1000px;
+  }
+}
+
 /* Dölj Testimonials på tablet och mobil */
 @media (max-width: 1023px) {
     .testimonials {
