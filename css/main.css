@@ -128,7 +128,7 @@ html.dark .logo .logo-dark {
 }
 
 html.dark .nav-actions {
-  color: var(--muted);
+  color: #565973;
 }
 
 .theme-toggle {
