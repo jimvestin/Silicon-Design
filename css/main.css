@@ -1,4 +1,4 @@
-/* Jim Vestin */
+
 
 :root {
   --bg: #ffffff;
@@ -53,7 +53,9 @@ img {
   max-width: calc(100% - 48px);
   margin: auto;
 }
-
+li{
+  list-style: none;
+}
 h1,
 h2,
 h3,
@@ -212,9 +214,9 @@ html.dark .hero {
 .hero-content {
   height: 876px;
   display: grid;
-  grid-template-columns: 550px 746px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
   align-items: flex-start;
-  position: relative;
 }
 
 .hero-copy {
@@ -225,6 +227,8 @@ html.dark .hero {
 
 .hero-copy h1 {
   color: var(--ink);
+  font-size: 56px;
+  width: 526px;
 }
 
 .hero-copy > p {
@@ -267,13 +271,15 @@ html.dark .stores .store-dark {
 /* jim - Hero telefon */
 
 .hero-phones {
-  display: grid;
-  grid-template-columns: 115px 230px 401px;
-  grid-template-rows: 136px 552px;
-  grid-column: 2;
+  grid-column: span 7;
   width: 746px;
-  height: 688px;
   margin-top: 188px;
+}
+
+.hero-phones img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .device {
@@ -301,7 +307,7 @@ html.dark .stores .store-dark {
 }
 
 
-/* jim -Färdig telefonbild där ram + skärm finns i samma bild */
+/* jim -telefonbild där ram + skärm finns i samma bild */
 
 .device.baked {
   overflow: visible;
@@ -383,9 +389,9 @@ html.dark .logos img:last-child {
 /* Jim Vestin - Features */
 
 .app-features {
-  min-height: 1008px;
+  min-height: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 140px;
 }
 
@@ -399,14 +405,9 @@ html.dark .logos img:last-child {
   width: 746px;
 }
 
-.features-copy h2 img {
-  display: block;
-  height: 40px;
-  width: auto;
-}
-
-html.dark .features-copy h2 img {
-  filter: invert(1);
+.features-copy h2 {
+  color: var(--ink);
+  font-size: 40px;
 }
 
 .features-copy > .muted {
@@ -445,7 +446,7 @@ html.dark .features-copy > .muted {
 }
 
 
-/* jim -Färdiga ikoner där bakgrunden finns */
+/* jim -ikoner där bakgrunden finns */
 
 .feature-list > article > img.baked {
   padding: 0;
@@ -484,7 +485,7 @@ html.dark .feature-list p {
 }
 
 
-/* jim - MOBIL FIRST LAYOUT */
+/* jim - MOBIL FIRST */
 
 .container {
   width: auto;
@@ -537,6 +538,11 @@ main {
   margin-top: 0;
 }
 
+.hero-copy h1 {
+  font-size: clamp(32px, 5vw + 12px, 56px);
+  width: 100%;
+}
+
 .hero-copy > p {
   font-size: 16px;
   margin: 16px 0 32px;
@@ -553,25 +559,15 @@ main {
 }
 
 .hero-phones {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-column: auto;
   width: 100%;
-  max-width: 340px;
-  height: auto;
-  aspect-ratio: 402 / 813;
+  max-width: 746px;
   margin: 0 auto;
 }
 
-.tilted {
-  display: none;
-}
-
-.hero-device {
-  grid-column: 1;
-  grid-row: 1;
+.hero-phones img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .logos {
@@ -640,6 +636,7 @@ main {
   .container {
     max-width: calc(100% - 48px);
   }
+}
 
   .navbar {
     padding: 16px max(24px, calc((100vw - 1296px) / 2));
@@ -658,12 +655,13 @@ main {
   .logos {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+
 
 @media (min-width: 901px) {
   .navbar {
     position: relative;
   }
+
 
   main {
     margin-top: -76px;
@@ -680,44 +678,29 @@ main {
 
   .hero-content {
     height: 876px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 24px;
     align-items: flex-start;
-    gap: 0;
     text-align: left;
   }
 
   .hero-copy {
-    width: 46%;
-    min-width: 320px;
+    grid-column: 1 / span 5;
+    width: 100%;
     max-width: none;
     margin-top: 224px;
   }
 
+  .stores {
+    justify-content: flex-start;
+  }
+
   .hero-phones {
-    display: grid;
-    grid-template-columns: 115px 230px 401px;
-    grid-template-rows: 136px 552px;
-    width: 52%;
+    grid-column: span 7;
+    width: 100%;
     max-width: none;
-    height: 688px;
-    aspect-ratio: auto;
-    margin: 188px 0 0 2%;
-  }
-
-  .tilted {
-    display: grid;
-    grid-column: 2 / span 2;
-    grid-row: 2;
-    align-self: start;
-  }
-
-  .hero-device {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    align-self: start;
-    width: 402px;
-    height: 813px;
+    margin: 188px 0 0;
   }
 
   .logos {
@@ -733,10 +716,11 @@ main {
 
   .app-features {
     flex-direction: row;
-    align-items: center;
-    min-height: 1008px;
+    align-items: flex-start;
+    min-height: auto;
     padding: 0;
     gap: 60px;
+    margin-top: 112px;
   }
 
   .feature-phone {
@@ -769,9 +753,9 @@ main {
 
 @media (min-width: 1201px) {
   .container {
-    width: 1296px;
-    max-width: calc(100% - 48px);
-  }
+  width: 1296px;
+  max-width: calc(100% - 48px);
+}
 
   .hero-content {
     display: grid;
@@ -784,6 +768,11 @@ main {
     width: 526px;
   }
 
+  .hero-copy h1 {
+    font-size: 56px;
+    width: 526px;
+  }
+
   .hero-phones {
     grid-column: 6 / span 7;
     width: 746px;
@@ -792,17 +781,366 @@ main {
 
   .app-features {
     display: grid;
-    grid-template-columns: repeat(12, 64px);
-    gap: 48px;
+    grid-template-columns: repeat(12, 86px);
+    gap: 24px;
+    align-items: flex-start;
+    min-height: auto;
+    margin-top: 112px;
   }
 
   .feature-phone {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 5;
   }
 
   .features-copy {
-    grid-column: 5 / span 8;
+    grid-column: 6 / span 7;
     width: 746px;
     flex: none;
   }
+
+}
+/*Markus Start*/
+/*How does it work start*/
+.how{
+  padding-block: 3.335rem;  
+  background-color: var(--bg-alt);
+  text-align: center;
+  
+  .h2{
+    display: flex;
+    justify-content: center;
+  }
+  .pictures{
+    display: flex;
+    justify-content: space-evenly;
+    padding-block: 3.335rem;
+  }
+  .how-pic:first-of-type,
+  .how-pic:last-of-type{
+    display: none;
+  }
+  @media (min-width: 768px){
+    .how-pic:first-of-type,
+    .how-pic:last-of-type{
+      display: block;
+    }
+  }
+}
+/*How does it work end*/
+.money{
+  padding-block: 10rem;
+  display: grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:2rem;
+  
+  }
+  .btn-1,.btn-2{
+    display:flex;
+    background-color: #6366F1;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9em;
+    border-radius: 0.375em;
+    max-width: 180px;
+    cursor: pointer;
+    color: #F5F6FE;
+  }
+  .money1{
+  grid-column: 1 / 3;
+  margin-top: 3rem;
+  width: 50ch;
+  }
+  .picmoney1{
+  grid-column: 3 / span 3;
+  }
+  .picmoney2{
+  grid-column: 1 / 2;
+  }
+    .perks{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-block: 1rem;
+
+  }
+  .perks img{
+    margin-right: .7rem;
+  }
+
+
+  .money2{
+  grid-column: 2 / span 3;
+    .h2money{
+      width: 20ch;
+    }
+  
+  }
+  .wallet-text{
+    display: flex;    
+    align-items: flex-start;
+  }
+  .big-text{
+    display: flex;    
+    align-items: flex-start;
+    padding-block: 1rem;
+  }
+  .small-text{
+    width: 25ch;
+    margin-top:2rem;
+    margin-bottom: 1.1rem;
+    .tiny{
+      padding:1rem;
+      align-items: left;
+    }
+  }
+  
+
+  @media (max-width: 1200px){
+  .makeyourmoney{
+    display: none;
+  }
+}
+/*Markus End*/
+
+/* Gökhan */
+
+
+  footer {
+   font-size: 14px;
+   color: #9397AD; 
+   font-family: Arial, Helvetica, sans-serif;
+
+   .footer-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+   }
+
+  } 
+
+  .container-footer {
+    height: 60px;
+    margin-top: 50px;
+
+  }
+
+  /* Gökhan FAQ */
+
+
+
+  .FAQ-Questions {
+    
+    height: 900px;
+    padding-top: 10px;
+    
+    
+}
+
+.phone-container {
+    display: grid;
+    grid-template-columns: 400px 700px;
+    gap: 100px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+.the-left-text h2 {
+    width: 400px
+}
+
+.phoner-p {
+    width: 340px;
+    margin: 40px 0px;
+    
+}
+
+
+.call-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.call-feature {
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #dfd7d7;
+  border-width: 1px;
+  padding: 14px;
+}
+
+ .phones-green {
+    color: #22C55E;
+  }
+
+  .the-phones i {
+    color: #22C55E;
+    margin-left: 10px;
+  }
+
+  .phone-p {
+    margin-bottom: 20px;
+    color: #565973;
+  }
+
+  .phone-purple {
+    color: #6366f1;
+  }
+
+  .the-phone i {
+     color: #6366f1;
+     margin-left: 10px;
+
+  }
+
+  .the-phone,
+  .the-phones {
+    display: grid;
+
+}
+
+.the-phone img,
+.the-phones img {
+  margin-bottom: 20px;
+}
+
+  .the-right-side li{
+    width: 800px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(61, 61, 61, 0.7);
+    width: 100%;
+    margin: 10px;
+    list-style-type: none;
+}
+
+   .the-right-side label {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 10px;
+     
+     cursor: pointer;
+}
+
+.the-right-side .lab-text {
+    font-size: 15px;
+}
+
+.input-radio[type="radio"] {
+    display: none;
+}
+
+.the-right-side .all-content {
+    padding: 0 10px;
+    line-height: 20px;
+    max-height: 0;
+    transition: max-height 0.5s, padding 0.5s;
+    overflow: hidden;
+    
+}
+
+.input-radio[type="radio"]:checked + label + .all-content {
+    max-height: 300px;
+    padding: 10px 10px 20px;
+}  
+
+
+.lab-text {
+  font-weight: 700;
+  
+}
+
+.circles i {
+  color: #0B0F19;
+}
+
+.lab-text .circles {
+    display: inline-block;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-color: #e0e6f8;
+    text-align: center;
+    line-height: 30px;
+    align-items: center;
+    transition: transform 0.5s, background-color 0.5s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.input-radio[type="radio"]:checked + label .circles i {
+    transform: rotate(180deg);
+}
+
+.input-radio[type="radio"]:checked + label .circles {
+    background-color: #6366F1; 
+}
+
+@media (max-width: 768px) {
+
+    .FAQ-Questions {
+        min-height: auto;
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+
+    .phone-container {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 50px;
+        max-width: 600px;
+    }
+
+    .the-left-text h2 {
+        width: 100%;
+    }
+
+    .phoner-p {
+        width: 100%;
+    }
+
+    .call-features {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .call-feature {
+        width: 100%;
+    }
+
+        .the-right {
+        width: 100%;
+    }
+
+    .the-right-side {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .the-right-side li {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+ 
+}
+
+  @media (max-width: 500px) {
+
+    .call-features {
+        grid-template-columns: 1fr;
+    }
+
+    .phone-container {
+      width: 90%;
+    }
 }

@@ -1,388 +1,444 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Silicon mobile banking application" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Silicon mobile banking application" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/main.css" />
 
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="stylesheet" href="css/main.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Silicon</title>
+  </head>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
-    rel="stylesheet">
+  <body>
+<!-- Jim Vestin - Sidhuvud -->
 
-  <title>Silicon</title>
-</head>
+<header class="navbar">
+  <a class="logo" href="#top">
+    <img class="logo-light" src="assets/logo.svg" alt="Silicon" />
+    <img class="logo-dark" src="assets/logo-dark.svg" alt="Silicon" />
+  </a>
 
-<body>
+  <div class="nav-actions">
+    <span>Dark Mode</span>
 
-  <!-- JIM VESTIN - HEADER -->
+    <span class="theme-toggle" aria-hidden="true">
+      <i></i>
+    </span>
 
-  <header class="navbar">
-
-    <a class="logo" href="#top">
-
-      <img
-        class="logo-light"
-        src="assets/logo.svg"
-        alt="Silicon"
-      />
-
-      <img
-        class="logo-dark"
-        src="assets/logo-dark.svg"
-        alt="Silicon"
-      />
-
+    <a class="sign-in" href="#faq">
+      <img src="assets/btn.png" alt="Sign in / up" />
     </a>
+  </div>
+</header>
 
-    <div class="nav-actions">
+<main id="top">
 
-      <span>Dark Mode</span>
+  <!-- Jim Vestin - Hero -->
 
-      <span
-        class="theme-toggle"
-        aria-hidden="true"
-      >
-        <i></i>
-      </span>
+  <section class="hero">
+    <div class="container grid-12 hero-content">
 
-      <a
-        class="sign-in"
-        href="#faq"
-      >
-        <img
-          src="assets/btn.png"
-          alt="Sign in / up"
-        />
-      </a>
+      <div class="hero-copy">
+        <h1>Manage All Your Money in One App</h1>
 
-    </div>
-
-  </header>
-
-
-  <main id="top">
-
-    <!-- JIM VESTIN - HERO -->
-
-    <section class="hero">
-
-      <div class="container grid-12 hero-content">
-
-        <div class="hero-copy">
-
-          <h1>
-            Manage All Your Money in One App
-          </h1>
-
-          <p>
-            We offer you a new generation of the mobile banking.<br />
-            Save, spend &amp; manage money in your pocket.
-          </p>
-
-          <!-- App Store / Google Play -->
-          <div class="stores">
-
-            <a href="#download">
-              <img
-                class="store-light"
-                src="assets/appstore.svg"
-                alt="Download on the App Store"
-              />
-              <img
-                class="store-dark"
-                src="assets/appstore-dark.svg"
-                alt="Download on the App Store"
-              />
-            </a>
-
-            <a href="#download">
-              <img
-                class="store-light"
-                src="assets/googleplay.svg"
-                alt="Get it on Google Play"
-              />
-              <img
-                class="store-dark"
-                src="assets/googleplay-dark.svg"
-                alt="Get it on Google Play"
-              />
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div class="hero-phones">
-
-          <div class="device tilted baked">
-
-            <img
-              src="assets/hero-tilted-device.png"
-              alt="My budget overview"
-            />
-
-          </div>
-
-
-          <div class="device hero-device">
-
-            <img
-              src="assets/hero-front-screen.png"
-              alt="Silicon banking app dashboard"
-            />
-
-            <img
-              class="frame"
-              src="assets/hero-phone.png"
-              alt=""
-            />
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- JIM VESTIN - BRANDS -->
-
-    <section
-      class="logos container"
-      aria-label="Partner companies"
-    >
-
-      <img
-        src="assets/logo-1.svg"
-        alt="Partner logo"
-      />
-
-      <img
-        src="assets/logo-2.svg"
-        alt="Partner logo"
-      />
-
-      <img
-        src="assets/logo-3.svg"
-        alt="Partner logo"
-      />
-
-      <img
-        src="assets/logo-4.svg"
-        alt="Partner logo"
-      />
-
-      <img
-        src="assets/logo-5.svg"
-        alt="Partner logo"
-      />
-
-      <img
-        src="assets/logo-6.svg"
-        alt="Partner logo"
-      />
-
-    </section>
-
-
-    <!-- JIM VESTIN -FEATURES -->
-
-    <section class="app-features container grid-12">
-
-      <div class="feature-phone device baked">
-
-        <img
-          src="assets/feature-device.png"
-          alt="Mobile payment screen"
-        />
-
-      </div>
-
-
-      <div class="features-copy">
-
-        <h2>
-
-          <img
-            src="assets/app-features-title.png"
-            alt="App Features"
-          />
-
-        </h2>
-
-
-        <p class="muted">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Proin volutpat mollis egestas. Nam luctus facilisis ultrices.
-          Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.
+        <p>
+          We offer you a new generation of the mobile banking.<br />
+          Save, spend &amp; manage money in your pocket.
         </p>
 
+        <!-- jim apple/google -->
 
-        <div class="feature-list">
+        <div class="stores">
 
-          <article>
-
+          <a href="#download">
             <img
-              src="assets/icon-card.svg"
-              alt=""
+              class="store-light"
+              src="assets/appstore.svg"
+              alt="Download on the App Store"
             />
-
-            <div>
-
-              <h3>
-                Easy Payments
-              </h3>
-
-              <p>
-                Id mollis consectetur congue egestas egestas
-                suspendisse blandit justo.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article>
-
             <img
-              src="assets/icon-shield.svg"
-              alt=""
+              class="store-dark"
+              src="assets/appstore-dark.svg"
+              alt="Download on the App Store"
             />
+          </a>
 
-            <div>
-
-              <h3>
-                Data Security
-              </h3>
-
-              <p>
-                Augue pulvinar justo, fermentum fames aliquam
-                accumsan vestibulum non.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article>
-
+          <a href="#download">
             <img
-              src="assets/icon-cost.png"
-              class="baked"
-              alt=""
+              class="store-light"
+              src="assets/googleplay.svg"
+              alt="Get it on Google Play"
             />
-
-            <div>
-
-              <h3>
-                Cost Statistics
-              </h3>
-
-              <p>
-                Mattis urna ultricies non amet, purus in auctor non.
-                Odio vulputate ac nibh.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article>
-
             <img
-              src="assets/icon-support.png"
-              class="baked"
-              alt=""
+              class="store-dark"
+              src="assets/googleplay-dark.svg"
+              alt="Get it on Google Play"
             />
-
-            <div>
-
-              <h3>
-                Support 24/7
-              </h3>
-
-              <p>
-                Faucibus cursus maecenas lorem cursus nibh.
-                Sociis sit risus id. Sit facilisis dolor arcu.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article>
-
-            <img
-              src="assets/icon-cashback.png"
-              class="baked"
-              alt=""
-            />
-
-            <div>
-
-              <h3>
-                Regular Cashback
-              </h3>
-
-              <p>
-                Sit facilisis dolor arcu, fermentum vestibulum arcu
-                elementum imperdiet eleifend.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article>
-
-            <img
-              src="assets/icon-top-standards.png"
-              class="baked"
-              alt=""
-            />
-
-            <div>
-
-              <h3>
-                Top Standards
-              </h3>
-
-              <p>
-                Nunc senectus leo vel venenatis accumsan vestibulum
-                sollicitudin amet.
-              </p>
-
-            </div>
-
-          </article>
+          </a>
 
         </div>
-
       </div>
 
-    </section>
+      <div class="hero-phones">
+        <img
+          src="assets/Nymobil.png"
+          alt="Silicon banking app dashboard"
+        />
+      </div>
 
-  </main>
+    </div>
+  </section>
 
 
-  <script src="main.js"></script>
+  <!-- Jim Vestin - Logotyper -->
 
-</body>
+  <section
+    class="logos container"
+    aria-label="Partner companies"
+  >
 
+    <img src="assets/logo-1.svg" alt="Partner logo" />
+    <img src="assets/logo-2.svg" alt="Partner logo" />
+    <img src="assets/logo-3.svg" alt="Partner logo" />
+    <img src="assets/logo-4.svg" alt="Partner logo" />
+    <img src="assets/logo-5.svg" alt="Partner logo" />
+    <img src="assets/logo-6.svg" alt="Partner logo" />
+
+  </section>
+
+
+  <!-- Jim Vestin - Funktioner -->
+
+  <section class="app-features container grid-12">
+
+    <div class="feature-phone device baked">
+      <img
+        src="assets/feature-device.png"
+        alt="Mobile payment screen"
+      />
+    </div>
+
+    <div class="features-copy">
+
+      <h2>App Features</h2>
+
+      <p class="muted">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Proin volutpat mollis egestas. Nam luctus facilisis ultrices.
+        Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.
+      </p>
+
+      <div class="feature-list">
+
+        <article>
+          <img src="assets/icon-card.svg" alt="" />
+
+          <div>
+            <h3>Easy Payments</h3>
+            <p>
+              Id mollis consectetur congue egestas egestas
+              suspendisse blandit justo.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <img src="assets/icon-shield.svg" alt="" />
+
+          <div>
+            <h3>Data Security</h3>
+            <p>
+              Augue pulvinar justo, fermentum fames aliquam
+              accumsan vestibulum non.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <img
+            src="assets/icon-cost.png"
+            class="baked"
+            alt=""
+          />
+
+          <div>
+            <h3>Cost Statistics</h3>
+            <p>
+              Mattis urna ultricies non amet, purus in auctor non.
+              Odio vulputate ac nibh.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <img
+            src="assets/icon-support.png"
+            class="baked"
+            alt=""
+          />
+
+          <div>
+            <h3>Support 24/7</h3>
+            <p>
+              Faucibus cursus maecenas lorem cursus nibh.
+              Sociis sit risus id. Sit facilisis dolor arcu.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <img
+            src="assets/icon-cashback.png"
+            class="baked"
+            alt=""
+          />
+
+          <div>
+            <h3>Regular Cashback</h3>
+            <p>
+              Sit facilisis dolor arcu, fermentum vestibulum arcu
+              elementum imperdiet eleifend.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <img
+            src="assets/icon-top-standards.png"
+            class="baked"
+            alt=""
+          />
+
+          <div>
+            <h3>Top Standards</h3>
+            <p>
+              Nunc senectus leo vel venenatis accumsan vestibulum
+              sollicitudin amet.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+    <!--MARKUS HOW DOES -->
+
+    <section class="how">
+      <div class="container">       
+          <h2 class="h2"> How Does It Work?</h2>
+            <div class="pictures">
+              <div class="how-pic">
+                <img src="assets/iPhone 12 Pro How left.svg" alt="App Showcase left">
+                  </div>
+                    <div class="how-pic">
+                  <img src="assets/iPhone 12 Pro How middle.svg" alt="App Showcase middle">
+                </div>
+              <div class="how-pic">
+            <img src="assets/iPhone 12 Pro How right.svg" alt="App Showcase right">
+          </div>
+        </div>          
+          <div class="text-how">
+          <h3 class="h4">Latest transaction history</h3>
+          <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed.<br> Arcu sociis tristique quisque hac in consectetur condimentum. </p>
+        </div>
+      </div>
+      </section>
+            
+      <!---MARKUS MAKE YOUR MONEY-->
+      <section class="makeyourmoney">
+        <div class="container money">                   
+          <div class="money1">
+            <h2 class="h2money">Make your money transfer simple and clear</h2>
+              <div class="perks">
+                <ul>
+                  <div class="perks">
+                    <img src="assets/bx-check-circle.svg" alt="Checkbox">                   
+                      <p>Banking transaction are free for you</p>
+                        </div>
+                          <div class="perks">
+                            <img src="assets/bx-check-circle.svg">
+                              <p>No monthly cash commission</p>
+                              </div>
+                              <div class="perks">
+                            <img src="assets/bx-check-circle.svg">
+                          <p>Manage payments and transactions online</p>
+                        </div>
+                      </ul>            
+                    </div>
+                  <a href="#" class="btn-1">
+              <span>Learn more</span>
+            <img src="assets/arrow right.svg" alt="arrow right">
+          </a>     
+        </div> 
+          <div class="picmoney1">
+            <img src="assets/apppic2.svg" alt="App Showcase">              
+              </div>                       
+                <div class="picmoney2">
+                  <img  src="assets/benefit-contacts-card.png" alt="App Showcase">                  
+                    </div>
+                      <div class="money2">                            
+                        <h2 class="h2money">Receive payments from international bank details</h2>
+                          <div class="wallet-text">
+                            <div class="big-text">
+                              <div class="small-text">                            
+                                <img class="tiny" src="assets/credit-card-small.svg" alt="Small creditcard">                            
+                                  <p>Manage your payments online.<br> Mollis congue egestas egestas fermentum fames.</p>                            
+                                  </div>
+                                <div class="small-text">
+                              <img class="tiny" src="assets/wallet.svg" alt="Small wallet">
+                            <p>A elementur and imperdiet enim,<br> peretium etiam facilisi aenean quam mauris.</p>
+                          </div>
+                        </div>
+                      </div>                          
+                    <section> <a href="#" class="btn-2">
+                  <span class="">Learn more</span>
+                <img src="assets/arrow right.svg" alt="arrow right"></a>
+              </section>   
+            </div>          
+          </div>
+        </section>
+               <!--Gökhan Faq and Questions-->
+    <section class="FAQ-Questions">
+            <div class="phone-container">
+                <div class="the-left-text">
+                    <h2>Any questions?<br>Check out the FAQs</h2>
+                    <p class="phoner-p">Still have unanswered questions and need to get in touch?</p>
+                  <div class="call-features">  
+                    <div class="call-feature">
+                        <div class="the-phone"><img src="assets/icon-phone.png" alt="">
+                            <p class="phone-p">Still have questions?</p>
+                            <a href="" class="the-phone-1">
+                                <span class="phone-purple">Contact us</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="call-feature">
+                        <div class="the-phones"><img src="assets/icon-chat-bubble.svg" alt="">
+                            <p class="phone-p">Dont like phone calls?</p>
+                            <a href="#" class="the-phone-1">
+                                <span class="phones-green">Contact us</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+                <div class="the-right">
+                    <ul class="the-right-side">
+                        <li>
+                            <input type="radio" name="accordion" id="first-collapse" class="input-radio">
+                            <label for="first-collapse" class="lab-text">Is any of my personal information stored in the
+                                App<span class="circles"><i class="fa-solid fa-chevron-up"></i></span></label>
+                            <div class="all-content">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem delectus nesciunt
+                                    veritatis ipsa deserunt nemo facilis labore! Numquam quasi reprehenderit praesentium
+                                    saepe libero ea voluptate. Nostrum nam ullam omnis praesentium?</p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="accordion" id="second-collapse" class="input-radio">
+                            <label for="second-collapse" class="lab-text">What formats can i download my transaction
+                                history in?<span class="circles"><i class="fa-solid fa-chevron-up"></i></span></label>
+                            <div class="all-content">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem delectus nesciunt
+                                    veritatis ipsa deserunt nemo facilis labore! Numquam quasi reprehenderit praesentium
+                                    saepe libero ea voluptate. Nostrum nam ullam omnis praesentium?</p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="accordion" id="third-collapse" class="input-radio">
+                            <label for="third-collapse" class="lab-text">Can i schedule future transfers?<span
+                                    class="circles"><i class="fa-solid fa-chevron-up"></i></span></label>
+                            <div class="all-content">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem delectus nesciunt
+                                    veritatis ipsa deserunt nemo facilis labore! Numquam quasi reprehenderit praesentium
+                                    saepe libero ea voluptate. Nostrum nam ullam omnis praesentium?</p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="accordion" id="fourth-collapse" class="input-radio">
+                            <label for="fourth-collapse" class="lab-text">When can i use Banking App services?<span
+                                    class="circles"><i class="fa-solid fa-chevron-up"></i></span></label>
+                            <div class="all-content">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem delectus nesciunt
+                                    veritatis ipsa deserunt nemo facilis labore! Numquam quasi reprehenderit praesentium
+                                    saepe libero ea voluptate. Nostrum nam ullam omnis praesentium?</p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="accordion" id="fifth-collapse" class="input-radio">
+                            <label for="fifth-collapse" class="lab-text">Can i create my own password that is easy for
+                                me to remeber?<span class="circles"><i
+                                        class="fa-solid fa-chevron-up"></i></span></label>
+                            <div class="all-content">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem delectus nesciunt
+                                    veritatis ipsa deserunt nemo facilis labore! Numquam quasi reprehenderit praesentium
+                                    saepe libero ea voluptate. Nostrum nam ullam omnis praesentium?</p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="accordion" id="sixth-collapse" class="input-radio">
+                            <label for="sixth-collapse" class="lab-text">What happens if i forget or lose my
+                                password?<span class="circles"><i class="fa-solid fa-chevron-up"></i></span></label>
+                            <div class="all-content">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem delectus nesciunt
+                                    veritatis ipsa deserunt nemo facilis labore! Numquam quasi reprehenderit praesentium
+                                    saepe libero ea voluptate. Nostrum nam ullam omnis praesentium?</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="the-left-text-tablet">  
+                   <div class="call-features">  
+                    <div class="call-feature-tablet">
+                        <div class="the-phone"><img src="assets/icon-phone.png" alt="">
+                            <p class="phone-p">Still have questions?</p>
+                            <a href="" class="the-phone-1">
+                                <span class="phone-purple">Contact us</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="call-feature-tablet">
+                        <div class="the-phones"><img src="assets/icon-chat-bubble.svg" alt="">
+                            <p class="phone-p">Dont like phone calls?</p>
+                            <a href="#" class="the-phone-1">
+                                <span class="phones-green">Contact us</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+                <a href="#" class="button-contact">Contact us now <a href=""></a>
+            </div>
+        </section>
+
+    </main>
+<footer>
+    <Div class="container-footer">
+        <div class="footer-contain">
+          <p class="copyright">© 2025 Silicon. All rights reserved.</p>
+        </div> 
+    </Div>
+</footer>
+    <script src="main.js"></script>
+    <script src="Accordion.js"></script>
+  </body>
 </html>
