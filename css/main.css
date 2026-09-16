@@ -1007,10 +1007,10 @@ html.dark .testimonial-text {
     }
   }
 
+
+
+
 /* Gökhan */
-
-
-
 
   footer {
    font-size: 14px;
@@ -1336,3 +1336,76 @@ html.dark .testimonial-text {
       padding-bottom: 5px;
     }
 }
+
+/* Alex subscribe */
+
+.subscribe {
+  width: 1296px;
+  height: 222px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(12, 86px);
+  column-gap: 24px;
+  align-items:center;
+}
+
+.bell{
+  grid-column: 2;
+  width: 78px;
+  height: 78px;
+}
+.h2-subscribe{
+  grid-column: 3 /7;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.input-group {
+  grid-column: 7 /12;
+  display:flex;
+}
+
+.input-group input {
+    width: 472px;
+    height: 52px;
+    background: #FFFFFF url("../assets/envelope.svg") no-repeat 16px center;
+    border-radius: 8px 0 0 8px;
+    padding-left: 46px;
+    border: none;
+}
+
+.input-group button {
+  width: 142px;
+  height: 52px;
+  border-radius: 0px 8px 8px 0px;
+  border:none;
+  font-weight: 600;
+  background-color:#6366F1;
+  color:#FFFFFF;
+
+}
+
+/* Alex subscribe dark mode */
+
+html.dark .input-group input {
+    background-color: #191D27;
+}
+
+
+/* Responsivitet tablet */
+@media (max-width: 1023px) {
+    .subscribe {
+        width: 705px;
+        height: 223px;
+    }
+    .input-group {
+        width: 100%;
+    }
+
+    .input-group input {
+        width: 100%;
+    }
+}
+
+
