@@ -796,7 +796,7 @@ main {
     flex: none;
   }
 
-
+}
 /* Alex testimonials */
 
 .testimonials{
@@ -875,6 +875,8 @@ height: 48px;
     }
 }
 
+
+
   footer {
    font-size: 14px;
    color: #9397AD; 
@@ -923,8 +925,9 @@ height: 48px;
 }
 
 .phoner-p {
-    width: 340px;
+    width: 360px;
     margin: 40px 0px;
+    color: #565973;
     
 }
 
@@ -933,6 +936,14 @@ height: 48px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+.call-feature {
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #dfd7d7;
+  border-width: 1px;
+  padding: 14px;
 }
 
  .phones-green {
@@ -946,6 +957,7 @@ height: 48px;
 
   .phone-p {
     margin-bottom: 20px;
+    color: #565973;
   }
 
   .phone-purple {
@@ -985,11 +997,13 @@ height: 48px;
      align-items: center;
      justify-content: space-between;
      padding: 10px;
-     font-size: 17px;
+     
      cursor: pointer;
 }
 
-
+.the-right-side .lab-text {
+    font-size: 15px;
+}
 
 .input-radio[type="radio"] {
     display: none;
@@ -1009,6 +1023,16 @@ height: 48px;
     padding: 10px 10px 20px;
 }  
 
+
+.lab-text {
+  font-weight: 700;
+  
+}
+
+.circles i {
+  color: #0B0F19;
+}
+
 .lab-text .circles {
     display: inline-block;
     border-radius: 50%;
@@ -1019,6 +1043,7 @@ height: 48px;
     line-height: 30px;
     align-items: center;
     transition: transform 0.5s, background-color 0.5s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .input-radio[type="radio"]:checked + label .circles i {
@@ -1027,6 +1052,28 @@ height: 48px;
 
 .input-radio[type="radio"]:checked + label .circles {
     background-color: #6366F1; 
+}
+
+.all-content {
+    color: #565973;
+}
+
+.button-contact {
+  display: none;
+}
+
+.the-left-text-tablet {
+  display: none;
+}
+
+
+@media (max-width:1100px) {
+.phone-container {
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 90%;
+  max-width: 1000px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1048,10 +1095,12 @@ height: 48px;
 
     .the-left-text h2 {
         width: 100%;
+        text-align: center;
     }
 
     .phoner-p {
         width: 100%;
+        text-align: center;
     }
 
     .call-features {
@@ -1079,10 +1128,35 @@ height: 48px;
         margin: 10px 0;
     }
 
+    .the-left-text-tablet {
+      display: contents;
+    }
+
+
+    .call-feature-tablet {
+      border-radius: 8px;
+      border-style: solid;
+      border-color: #d7d7df;
+      border-width: 1px;
+      padding: 14px;
+}
+
+    .call-feature {
+      display: none;
+    }
+
  
 }
 
   @media (max-width: 500px) {
+
+    .call-feature {
+      display: none;
+    }
+
+    .call-feature-tablet {
+      display: none;
+    }
 
     .call-features {
         grid-template-columns: 1fr;
@@ -1090,5 +1164,40 @@ height: 48px;
 
     .phone-container {
       width: 90%;
+    }
+
+    .the-right-side label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      font-size: 13px;
+    }
+
+    .lab-text {
+      min-width: 0;
+    }
+
+    .lab-text .circles {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+    }
+
+    .button-contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-color: #6366F1;
+      border-radius: 6px;
+      background-color: #6366F1;
+      color: #e0e6f8;
+      height: 49.5px;
+      width: 162.5px;
+      border: 1px;
+      justify-self: center;
+      font-size: 14px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      padding-bottom: 5px;
     }
 }
