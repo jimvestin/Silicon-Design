@@ -1,5 +1,8 @@
 const themeToggle = document.querySelector('.theme-toggle');
 
-themeToggle.addEventListener('click', () => {
-  document.documentElement.classList.toggle('dark');
-});
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+  });
+}

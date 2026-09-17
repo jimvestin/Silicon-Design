@@ -1,4 +1,4 @@
-/* Jim Vestin */
+/* Jim */
 
 :root {
   --bg: #ffffff;
@@ -81,7 +81,7 @@ h2 {
 }
 
 
-/* Jim Vestin - Header */
+/* Jim - Header */
 
 .navbar {
   height: 76px;
@@ -131,6 +131,20 @@ html.dark .nav-actions {
   color: #565973;
 }
 
+html.dark .nav-actions > span:first-child {
+  display: flex;
+  width: 84px;
+  height: 26px;
+  flex-direction: column;
+  justify-content: center;
+  color: #565973;
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25.6px;
+}
+
 .theme-toggle {
   width: 46px;
   height: 24px;
@@ -176,6 +190,10 @@ html.dark .theme-toggle i {
   display: block;
 }
 
+.menu-icon {
+  display: none;
+}
+
 .button {
   padding: 9px 20px;
   border-radius: 4px;
@@ -185,27 +203,27 @@ html.dark .theme-toggle i {
 }
 
 
-/* Jim Vestin - Hero */
+/* Jim - Hero */
 
 .hero {
   min-height: 876px;
   overflow: hidden;
   background:
     radial-gradient(
-      ellipse 42% 35% at 50% 100%,
-      rgba(99, 102, 241, .12),
-      rgba(218, 70, 239, .05) 42%,
-      transparent 72%
+      118% 116.18% at 50% 100%,
+      rgba(99, 102, 241, .10) 0%,
+      rgba(218, 70, 239, .05) 41.83%,
+      rgba(241, 244, 253, .070588) 82.52%
     );
 }
 
 html.dark .hero {
   background:
     radial-gradient(
-      120.91% 118.4% at 50% 100%,
+      118% 116.18% at 50% 100%,
       rgba(99, 102, 241, .10) 0%,
       rgba(218, 70, 239, .05) 41.83%,
-      rgba(241, 244, 253, .07) 82.52%
+      rgba(19, 16, 34, 0) 82.52%
     );
 }
 
@@ -240,6 +258,10 @@ html.dark .hero {
   gap: 24px;
 }
 
+.tablet-break {
+  display: none;
+}
+
 .stores .store-dark {
   display: none;
 }
@@ -265,8 +287,14 @@ html.dark .stores .store-dark {
   object-fit: contain;
 }
 
+html.dark .stores .store-dark {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
-/* jim - Hero telefon */
+
+/* Jim - Hero telefon */
 
 .hero-phones {
   grid-column: span 7;
@@ -305,7 +333,7 @@ html.dark .stores .store-dark {
 }
 
 
-/* jim -telefonbild där ram + skärm finns i samma bild */
+/* Jim - Hero telefon */
 
 .device.baked {
   overflow: visible;
@@ -339,7 +367,7 @@ html.dark .stores .store-dark {
 }
 
 
-/* Jim Vestin - Brands */
+/* Jim - Brands */
 
 .logos {
   height: 100px;
@@ -377,6 +405,32 @@ html.dark .logos img {
   opacity: .7;
 }
 
+html.dark .logos img:nth-child(-n + 5) {
+  padding: 0;
+  border: 0;
+  opacity: 1;
+}
+
+html.dark .logos img:nth-child(1) {
+  content: url('../assets/1 dark brand logo.png');
+}
+
+html.dark .logos img:nth-child(2) {
+  content: url('../assets/2 dark brand logo.png');
+}
+
+html.dark .logos img:nth-child(3) {
+  content: url('../assets/3 dark brand logo.png');
+}
+
+html.dark .logos img:nth-child(4) {
+  content: url('../assets/4 dark brand logo.png');
+}
+
+html.dark .logos img:nth-child(5) {
+  content: url('../assets/5 dark brand logo.png');
+}
+
 html.dark .logos img:last-child {
   background: rgba(255, 255, 255, .04);
   box-shadow: none;
@@ -384,7 +438,7 @@ html.dark .logos img:last-child {
 }
 
 
-/* Jim Vestin - Features */
+/* Jim - Features */
 
 .app-features {
   min-height: auto;
@@ -405,7 +459,8 @@ html.dark .logos img:last-child {
 
 .features-copy h2 {
   color: var(--ink);
-  font-size: 40px;
+  border: 0;
+  background: transparent;
 }
 
 .features-copy > .muted {
@@ -421,7 +476,7 @@ html.dark .features-copy > .muted {
 }
 
 
-/* jim - Feature grid */
+/* Jim - Feature grid */
 
 .feature-list {
   display: grid;
@@ -444,7 +499,7 @@ html.dark .features-copy > .muted {
 }
 
 
-/* jim -ikoner där bakgrunden finns */
+/* Jim - Feature ikoner */
 
 .feature-list > article > img.baked {
   padding: 0;
@@ -452,7 +507,7 @@ html.dark .features-copy > .muted {
 }
 
 
-/* jim Feature headings */
+/* Jim - Feature headings */
 
 .feature-list h3 {
   margin: 0 0 12px;
@@ -468,7 +523,7 @@ html.dark .feature-list h3 {
 }
 
 
-/* jim - Feature text */
+/* Jim - Feature text */
 
 .feature-list p {
   color: #565973;
@@ -483,7 +538,7 @@ html.dark .feature-list p {
 }
 
 
-/* jim - MOBIL FIRST */
+/* Jim - Mobil */
 
 .container {
   width: auto;
@@ -517,11 +572,14 @@ main {
 
 .hero {
   min-height: auto;
-  padding: 132px 0 64px;
+  padding: 0;
 }
 
 .hero-content {
-  height: auto;
+  width: 100vw;
+  max-width: 100vw;
+  height: 499px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -534,24 +592,45 @@ main {
   max-width: 480px;
   min-width: 0;
   margin-top: 0;
+  display: grid;
+  justify-items: center;
 }
 
 .hero-copy h1 {
-  font-size: clamp(32px, 5vw + 12px, 56px);
-  width: 100%;
+  width: 298.41px;
+  height: 88.76px;
+  color: #131022;
+  text-align: center;
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 34.1px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 44.38px;
+  flex-shrink: 0;
 }
 
 .hero-copy > p {
-  font-size: 16px;
+  display: flex;
+  width: 361.41px;
+  height: 115.2px;
+  flex-direction: column;
+  justify-content: center;
+  color: #585C7B;
+  text-align: center;
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.8px;
   margin: 16px 0 32px;
 }
 
 .stores {
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .stores a {
+  display: block;
   width: 160px;
   height: 46px;
 }
@@ -577,6 +656,151 @@ main {
 
 .logos img {
   padding: 20px;
+}
+
+@media (max-width: 900px) {
+  .sign-in {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    color: #565973;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  html.dark .menu-icon {
+    color: #FFF;
+  }
+}
+
+@media (max-width: 560px) {
+  html.dark .nav-actions > span:first-child {
+    display: none;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .hero-phones {
+    display: none;
+  }
+
+  .feature-phone {
+    display: none;
+  }
+
+  .features-copy h2 {
+    width: 100%;
+    font-size: clamp(26px, 3vw + 12px, 40px);
+    text-align: center;
+  }
+
+  .hero-copy {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    width: 100%;
+    max-width: 100%;
+    height: 499px;
+    box-sizing: border-box;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    row-gap: 16px;
+    justify-items: center;
+    align-content: start;
+  }
+
+  .hero-copy h1 {
+    grid-column: 1;
+    grid-row: 1;
+    width: min(298.41px, 100%);
+    height: auto;
+    margin: 0;
+    align-self: start;
+  }
+
+  .hero-copy > p {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    width: min(361.41px, calc(100% - 24px));
+    margin: 0;
+  }
+
+  .stores {
+    grid-column: 1;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 58px 58px;
+    gap: 16.01px;
+    width: 100%;
+    height: 132.01px;
+    align-content: start;
+    margin: 16px 0 0;
+  }
+
+  .stores a {
+    display: flex;
+    box-sizing: border-box;
+    position: static;
+    grid-column: 1;
+    width: calc(100% - 24px);
+    height: 58px;
+    min-width: 0;
+    max-width: none;
+    min-height: 58px;
+    max-height: 58px;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0 12px;
+    padding: 0;
+    border: 1px solid #131022;
+    border-radius: 8px;
+    background: #131022;
+  }
+
+  .stores a:first-child {
+    grid-row: 1;
+    height: 58px;
+    min-height: 58px;
+    max-height: 58px;
+    padding: 0;
+  }
+
+  .stores a:nth-child(2) {
+    grid-row: 2;
+  }
+
+  html.dark .stores a {
+    border-color: #131022;
+    background: #EFF2FC;
+  }
+
+  html.dark .stores .store-dark {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .stores a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .logos {
+    display: none;
+  }
 }
 
 .app-features {
@@ -614,30 +838,17 @@ main {
   flex-shrink: 0;
 }
 
-@media (max-width: 400px) {
-  .stores {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .stores a {
-    width: 100%;
-    max-width: 220px;
-  }
-
-  .feature-phone {
-    width: 85vw;
-  }
-}
-
 @media (min-width: 561px) {
   .container {
     max-width: calc(100% - 48px);
   }
-}
 
   .navbar {
     padding: 16px max(24px, calc((100vw - 1296px) / 2));
+  }
+
+  .nav-actions > span:first-child {
+    display: inline;
   }
 
   .hero-copy > p {
@@ -653,6 +864,186 @@ main {
   .logos {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+@media (min-width: 561px) and (max-width: 900px) {
+  .tablet-break {
+    display: block;
+  }
+
+  .hero-content {
+    width: 100vw;
+    height: 618px;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: 221px 115.2px 43.95px repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+    text-align: left;
+  }
+
+  .hero-copy {
+    display: contents;
+  }
+
+  .hero-copy h1 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: center;
+    width: 442px;
+    height: 173px;
+    color: #131022;
+    text-align: center;
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 44.3px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 57.64px;
+    margin: 0;
+  }
+
+  .hero-copy > p {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    align-self: start;
+    width: min(270.35px, calc(100% - 12px));
+    height: 115.2px;
+    margin: 0;
+    text-align: left;
+    margin-left: 24px;
+  }
+
+  .hero-copy .stores {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 126fr 138fr;
+    align-self: start;
+    width: min(280.01px, calc(100% - 12px));
+    margin-left: 24px;
+    margin-top: 8px;
+    gap: 16.01px;
+  }
+
+  .hero-copy .stores a {
+    display: flex;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: 1px solid #131022;
+    border-radius: 8px;
+    background: #131022;
+  }
+
+  .hero-copy .stores a:first-child {
+    width: 100%;
+    height: 43.9px;
+  }
+
+  .hero-copy .stores a:first-child img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .hero-copy .stores a:nth-child(2) {
+    width: 100%;
+    height: 43.95px;
+  }
+
+  html.dark .hero-copy .stores a {
+    border-color: #131022;
+    background: #EFF2FC;
+  }
+
+  html.dark .hero-copy .stores .store-dark {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .hero-copy .stores a:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .hero-phones {
+    grid-column: 3 / -1;
+    grid-row: 2 / -1;
+    align-self: end;
+    justify-self: end;
+    width: min(452px, calc(100% - 24px));
+    max-width: 452px;
+    height: 469.054px;
+    aspect-ratio: auto;
+    margin: 0 24px 0 0;
+  }
+
+  .hero-phones img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .logos {
+    width: min(722px, calc(100% - 48px));
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 137px));
+    justify-content: center;
+    align-items: start;
+    gap: 24px;
+    padding: 24px 8px 27.46px;
+  }
+
+  .logos img {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+  }
+
+  .logos img:nth-last-child(-n + 2) {
+    display: none;
+  }
+
+  .feature-phone {
+    display: none;
+  }
+
+  .features-copy,
+  .features-copy h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .features-copy h2 {
+    font-size: clamp(26px, 3vw + 12px, 40px);
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+}
+
+html.dark .hero-copy h1 {
+  color: var(--ink);
+}
+
+html.dark .hero-copy > p {
+  color: var(--muted);
+}
 
 
 @media (min-width: 901px) {
@@ -675,6 +1066,8 @@ main {
   }
 
   .hero-content {
+    width: auto;
+    max-width: calc(100% - 48px);
     height: 876px;
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -690,7 +1083,23 @@ main {
     margin-top: 224px;
   }
 
+  .hero-copy h1 {
+    width: 100%;
+    height: auto;
+    font-size: 56px;
+    text-align: left;
+    line-height: 1.3;
+  }
+
+  .hero-copy > p {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: left;
+  }
+
   .stores {
+    width: 100%;
     justify-content: flex-start;
   }
 
