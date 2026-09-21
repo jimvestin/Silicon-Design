@@ -1902,7 +1902,7 @@ html.dark .input-group input {
 .h2-subscribe-tablet-phone {
     display: none;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
     .subscribe {
         width: 705px;
         height: 223px;
