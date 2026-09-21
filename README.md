@@ -12,6 +12,13 @@ Jag har arbetat med följande delar:
 - App Features
 - Dark Mode
 
+Branches:
+- jim-header
+- jim-hero
+- jim-brands
+- jim-features
+- jim-brand-features-darkmode
+
 Mina delar är anpassad för mobile, tablet och desktop och är byggda enligt mobile-first.
 
 För layouten har jag främst använt CSS Grid och Flexbox. Jag har även använt ett 12-kolumners grid, container och gap för att placera innehållet och få layouten att fungera på olika skärmstorlekar.
@@ -19,11 +26,3 @@ För layouten har jag främst använt CSS Grid och Flexbox. Jag har även använ
 Responsiviteten är gjord med media queries där layouten anpassas efter skärmens bredd.
 
 Dark Mode är gjort med CSS-variabler för färgerna och JavaScript för att växla mellan ljust och mörkt läge.
-
-### Mina branches
-
-- jim-header
-- jim-hero
-- jim-brands
-- jim-features
-- jim-brand-features-darkmode
