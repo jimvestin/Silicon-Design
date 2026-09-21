@@ -1888,16 +1888,13 @@ html.dark .input-group input {
 
 /* Alex responsivitet laptop */
 
-@media (min-width: 1024px) and (max-width: 1200px) {
-
-    .subscribe {
-        width: 90%;
-        max-width: 1296px;
-
-        grid-template-columns: repeat(12, 1fr);
-        column-gap: 24px;
+@media (min-width: 1024px) and (max-width: 1100px) {
+    .testimonials {
+        width: 100%;
+        max-width: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
     }
-
 }
 
 /* Alex responsivitet tablet */
