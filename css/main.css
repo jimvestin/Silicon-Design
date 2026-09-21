@@ -1273,7 +1273,7 @@ html.dark .hero-copy > p {
       display:none;
     }
     .how-mobile{
-      display: flex;
+      display: flex;    
     }
     .pic-desk{
       display:none;
@@ -1284,6 +1284,7 @@ html.dark .hero-copy > p {
     .pic-mob{
       display: flex;
       justify-content: center;
+      padding-block: 2rem;
     }    
   }
 /*How does it work end*/
