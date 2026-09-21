@@ -1225,7 +1225,7 @@ html.dark .hero-copy > p {
   .h2,.h4{
     display: flex;
     justify-content: center;
-    color:#0B0F19
+    color: var(--ink);
   }
     .pic-desk{
     display: flex;
@@ -1293,7 +1293,8 @@ html.dark .hero-copy > p {
   padding-block: 10rem;
   display: grid;
   grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:2rem;  
+  gap:2rem;
+  
   }
   .btn-1,.btn-2{
     display:flex;
@@ -1313,7 +1314,7 @@ html.dark .hero-copy > p {
   width: 50ch;
   .h2money{
     margin-bottom: 1.5rem;
-  }
+      }
   }
   .picmoney1{
   grid-column: 3 / span 3;
@@ -1335,6 +1336,7 @@ html.dark .hero-copy > p {
   grid-column: 2 / span 3;
     .h2money{
       width: 20ch;
+      
     }
   
   }
