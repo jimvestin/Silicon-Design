@@ -1405,9 +1405,16 @@ border-radius: 8px;
 box-sizing: border-box;
 }
 
+.quotes {
+    width: 44px;
+    height: 44px;
+    margin-top: -44px;
+    margin-left: -14px;
+}
+
 .stars {
 font-size: 20px;
-margin-top: 24px;
+margin-top: 0px;
 margin-bottom: 24px;
 color: #FFBA08;
 }
