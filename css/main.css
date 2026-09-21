@@ -1474,10 +1474,10 @@ html.dark .testimonial-text {
     }
   }
 
+
+
+
 /* Gökhan */
-
-
-
 
   footer {
    font-size: 14px;
@@ -1803,3 +1803,213 @@ html.dark .testimonial-text {
       padding-bottom: 5px;
     }
 }
+
+/* Alex subscribe */
+
+.subscribe {
+  width: 1296px;
+  height: 222px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(12, 86px);
+  column-gap: 24px;
+  align-items:center;
+  background:#F3F6FF;
+  border-radius: 8px;
+}
+
+.bell{
+  grid-column: 2;
+  width: 78px;
+  height: 78px;
+}
+.h2-subscribe{
+  grid-column: 3 /7;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.input-group {
+  grid-column: 7 /12;
+  display:flex;
+}
+
+.input-group input {
+    width: 472px;
+    height: 52px;
+    background: #FFFFFF url("../assets/envelope.svg") no-repeat 16px center;
+    border-radius: 8px 0 0 8px;
+    padding-left: 46px;
+    border: none;
+}
+
+.input-group button {
+  width: 142px;
+  height: 52px;
+  border-radius: 0px 8px 8px 0px;
+  border:none;
+  font-weight: 600;
+  background-color:#6366F1;
+  color:#FFFFFF;
+
+}
+
+/* Alex subscribe dark mode */
+
+html.dark .subscribe {
+    background-color: #151822;
+}
+
+html.dark .input-group input {
+    background-color: #FFFFFF;
+}
+
+
+/* Responsivitet tablet */
+
+.h2-subscribe-tablet-phone {
+    display: none;
+}
+@media (max-width: 1023px) {
+    .subscribe {
+        width: 705px;
+        height: 223px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        border-radius: 8px;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 20px;
+        padding-left: 31px;
+        padding-right: 31px;
+    }
+
+    .bell{
+      grid-column: 1;
+      width: 78px;
+      height: 78px;
+    }
+    .h2-subscribe{
+    display: none;
+    }
+    
+     .h2-subscribe-tablet-phone {
+        display: block;
+        grid-column: 2 / 3;
+        width: 201px;
+        height: 126px;
+        font-family: "Manrope", sans-serif;
+        font-size: 24px;
+        font-weight: 800;
+     }
+    
+    .input-group {
+        grid-column: 3 / 5;
+        width: 340px;
+        height: 52px;
+        box-sizing: border-box;
+    }
+    .input-group input {
+        width: 198px;
+        height: 52px;
+        box-sizing: border-box;
+    }
+
+    .input-group button {
+        width: 142px;
+        height: 52px;
+        box-sizing: border-box;
+    }
+  }
+
+/*  Responsivitet mobil */
+
+@media (max-width: 500px) {
+
+    .subscribe {
+        width: 366px;
+        height: 251px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 78px 52px 52px;
+        column-gap: 16px;
+        padding: 35px 4px 0 4px;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+
+    .bell {
+        grid-column: 1;
+        grid-row: 1;
+        width: 78px;
+        height: 78px;
+        margin-left: 12px;
+    }
+
+    .h2-subscribe-tablet-phone {
+        display: block;
+        grid-column: 2 / 5;
+        grid-row: 1;
+        width: 201px;
+        height: 126px;
+        margin: 48px auto 0 auto;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 1.4;
+    }
+
+    .input-group {
+        grid-column: 1 / 6;
+        grid-row: 3;
+        width: 100%;
+        height: 52px;
+        display: flex;
+        margin: 0;
+    }
+
+    .input-group input {
+        width: 216px;
+        height: 52px;
+        box-sizing: border-box;
+    }
+
+    .input-group button {
+        width: 142px;
+        height: 52px;
+        box-sizing: border-box;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .subscribe {
+        width: 97.5%;
+        max-width: 366px;
+        height: 251px;
+        margin: 0px 12px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 78px 52px 52px;
+        column-gap: 16px;
+        padding: 35px 4px 0 4px;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+
+.input-group input {
+        width: 200px;
+        height: 52px;
+        box-sizing: border-box;
+}
+
+.input-group button {
+        width: 100px;
+        height: 52px;
+        box-sizing: border-box;
+        flex-shrink: 0;
+    }
+    
+  }
