@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
             //Går igång ifall jag klickar på samma radio 2 gånger, tex A sen klickar A igen
             if (radio === lastChecked) {
                 radio.checked = false;
+
+                //Gör att jag kan fortsätta öppna accordions, resetar minnet kan man säga
                 lastChecked = null; 
             } else {
                 
