@@ -1599,8 +1599,10 @@ html.dark .testimonial-text {
   margin-bottom: 20px;
 }
 
+  /* Gökhan styling för accordions */
+
   .the-right-side li{
-    width: 800px;
+    
     padding: 20px;
     border-radius: 8px;
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
