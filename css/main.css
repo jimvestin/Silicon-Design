@@ -1216,7 +1216,7 @@ html.dark .hero-copy > p {
   text-align: center;
 }
  .text-how,.how-tablet,.how-mobile{
-      color: #565973;
+      color: var(--muted);
       display:flex;
       flex-direction: column;
       text-align: center;
@@ -1327,7 +1327,7 @@ html.dark .hero-copy > p {
   align-items: center;
   justify-content: flex-start;
   padding-block: .4rem;
-  color: #565973;
+  color: var(--muted);
   }
   .perks img{
     margin-right: .7rem;
@@ -1353,7 +1353,7 @@ html.dark .hero-copy > p {
     width: 25ch;
     margin-top:2rem;
     margin-bottom: 1.1rem;
-    color: #565973;
+    color: var(--muted);
     .tiny{
       padding:1rem;
       align-items: left;
