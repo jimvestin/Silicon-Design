@@ -1,6 +1,8 @@
 //Gökhan accordion
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    // Skapar variabeln "lastChecked" och skapar även värdet
     let lastChecked = null; 
 
 
